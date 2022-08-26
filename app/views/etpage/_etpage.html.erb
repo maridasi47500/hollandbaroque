@@ -1,0 +1,19 @@
+<div class="pageet-card col-12 col-md-6">
+    <a class="pageet-card-imageblock" href="<%=url_for(locale: @currentlocale, action: "show", controller: "etpage", title: post.url)%>" title="<%=post.title%>">
+                <span class="card-tag">
+            <%=post.date%>          </span>
+            <img class="pageet-card-image"
+          src="/wp-content/uploads/2021/01/StagaireNIEUW-1920x1280.jpg" 
+          alt="<%=post.title%>" />
+    </a>
+    <div class="pageet-card-innerblock">
+      <h2 class="pageet-card-title">
+        <a href="<%=url_for(locale: @currentlocale, action: "show", controller: "etpage", title: post.url)%>" title="<%=post.title%>">
+          <%=post.title%>        </a>
+      </h2>
+                <span class="message">
+            <%=post.subtitle%>          </span>
+              <a href="<%=url_for(locale: @currentlocale, action: "show", controller: "etpage", title: post.url)%>" class="more-link" title="<%=post.title%>">
+          <%=t('onpages.readmore')%>        </a>
+    </div>
+</div>

@@ -1,0 +1,7 @@
+<figure id="object_table_concert" class="wp-block-table"><table><tbody>
+<%content.concert.playtimes.each do |time|%>
+<tr><td><%=content.concert.title%></td><td><%=l(time.date, format: :playtime_date)%> <%=l(time.time, format: :playtime_time)%></td><td><%=time.location.place%></td><td><%=time.location.city%></td></tr>
+
+<%end%>
+
+</tbody></table></figure>

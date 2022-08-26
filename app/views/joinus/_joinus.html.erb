@@ -1,0 +1,15 @@
+ <div class="page-card col-12 col-md-6">
+    <a class="page-card-imageblock" href="<%=url_for(controller: "joinus", action: "othershortroute", locale: @currentlocale, title1: post.url)%>" title="<%=post.title%>">
+      <img class="page-card-image"
+          src="<%=post.image%>"
+          alt="<%=post.title%>" />
+    </a>
+    <div class="page-card-innerblock">
+      <h2 class="page-card-title">
+        <a href="<%=url_for(controller: "joinus", action: "othershortroute", locale: @currentlocale, title1: post.url)%>" title="<%=post.title%>">
+          <%=post.title%>        </a>
+      </h2>
+      <a href="<%=url_for(controller: "joinus", action: "othershortroute", locale: @currentlocale, title1: post.url)%>" class="more-link" title="<%=post.title%>">
+        <%=t('onpages.readmore')%>      </a>
+    </div>
+  </div>

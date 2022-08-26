@@ -1,0 +1,15 @@
+<div id="MusiciCardPanel" class="musici-panel-overlay">
+
+<div class="musicus-panel">
+  <div class="musicus-panel-imageblock">
+    <img class="musicus-panel-image" src="<%=@musician.image%>" alt="<%=@musician.title%>">
+  </div>
+  <article class="musicus-panel-innerblock">
+    <button id="MusicusPanelClose" class="close close-button" data-link="<%=url_for(controller: "overons", action: "musician", name: "", locale: @currentlocale)%>">
+    </button>
+    <h2><%=@musician.title%></h2>
+    <span class="subtitle">
+        <%=@musician.subtitle%>    </span>
+      </article>
+</div>
+</div>

@@ -1,0 +1,131 @@
+
+<div class="concerts-content">
+  <div class="concerts-slider-wrapper">
+
+      <div class="title-wrapper">
+        <h1><%=t('pages.concerts')%></h1>
+        <div class="row">
+          <div 
+  id="ConcertFilters"
+  class="concert-filters-wrapper filters-wrapper col-12">
+
+  <div class="button-wrappers">
+    <button
+onclick="ConcertFilterLocations.dataset.state=(ConcertFilterLocations.dataset.state==='closed' ? 'open' : 'closed');" 
+      id="LocationFilter"
+      class="filter-button-main"
+      data-default-label="<%=t('pages.location')%>">
+      <%=t('pages.location')%>    </button>
+
+    <button 
+onclick="ConcertFilterMonths.dataset.state=(ConcertFilterMonths.dataset.state==='closed' ? 'open' : 'closed');" 
+
+      id="MonthFilter"
+      class="filter-button-main"
+      data-default-label="<%=t('pages.month')%>">
+      <%=t('pages.month')%>    </button>
+  </div>
+
+  <div 
+    id="ConcertFilterLocations"
+    class="concert-filter concert-filter-location"
+    data-state="closed" >
+
+    <div 
+      id="LocationDropDownPanel"
+      class="filter-dropdown-panel">
+            <%@array2.each do |x|%>
+                <button
+            class="filter-button-option"
+            data-location-term-slug="<%=x.place.downcase.gsub(" ",'+')%>"
+            data-location-term-id="<%=x.location_id%>"
+            data-related-months="<%=JSON.parse(x.months).join(',').downcase.gsub(" ",'+')%>">
+            <%=x.place%>          </button>
+            <%end%>
+                  
+            </div>
+  </div>
+
+  <div 
+    id="ConcertFilterMonths"
+    class="concert-filter concert-filter-months"
+    data-state="closed" >
+
+    <div 
+      id="MonthDropDownPanel"
+      class="filter-dropdown-panel">
+            <%@myarray.each do |x|%>
+                <button
+            class="filter-button-option"
+            data-month-slug="<%=t("date.month_names")[x.mymonth.to_i]%>"
+            data-month-number="<%=x.mymonth%>"
+            data-related-locations="<%=JSON.parse(x.locations).join(',')%>">
+            <%=t("date.month_names")[x.mymonth.to_i]%>          </button>
+            <%end%>
+                  
+  </div>
+
+</div>        </div>
+
+  </div>
+
+    <div id="ConcertSwiper" class="content-block-swiper concert-cards swiper-container concert-swiper-container">
+    <div class="swiper-wrapper"> 
+    
+
+<%=render collection: @concerts, as: :concert, partial: "concerts/concert"%>
+
+    </div>
+    <div class="swiper-navs">
+      <div class="swiper-button-prev"></div>
+      <!-- Add Pagination -->
+      <!-- <div class="swiper-pagination"></div> -->
+      <!-- Add Arrows -->
+      <div class="swiper-button-next"></div>
+    </div>
+  </div></div>  <div class="container">
+    <div class="row">
+      <div class="col-12 col-lg-10 offset-lg-1">
+        
+
+          <article class="page-content">
+    
+    
+    
+    
+  </article>	<div class="block-newsletter-subscribe">
+	<span class="block-newsletter-subscribe-title">
+		Blijf op de hoogte	</span>
+	<span class="block-newsletter-subscribe-subtitle">
+		Schrijf je in voor onze maandelijkse nieuwsbrief en maak kans op een cd	</span>
+	<div class="block-support-menu">
+		<a class="button"
+			href="#newsletter">
+			Abonneer		</a>
+	</div>
+</div>      </div>
+    </div>
+  </div>
+</div>
+<%=content_for :bootstrap do%>
+ <link rel="stylesheet" href="/application.html_files/bootstrap.min.css">
+	<link rel="stylesheet" href="/application.html_files/cx.css">
+	<link rel="stylesheet" href="/application.html_files/minimal.css">
+	<link rel="stylesheet" href="/application.html_files/admin.css">
+	<link rel="stylesheet" href="/application.html_files/font-awesome-4.6.3.min.css">
+	
+	  	<link rel="stylesheet" type="text/css" href="/application.html_files/formulieren.css">
+	
+        <%end%>
+<script>
+window.onload=function(){
+LocationFilter.onclick = function(){
+ConcertFilterLocations.dataset.state=(ConcertFilterLocations.dataset.state==='closed' ? 'open' : 'closed');
+return false;
+}
+MonthFilter.onclick = function(){
+ConcertFilterMonths.dataset.state=(ConcertFilterMonths.dataset.state==='closed' ? 'open' : 'closed');
+return false;
+}
+}
+</script>

@@ -1,0 +1,2 @@
+class Friendarticle < Article
+end

@@ -1,0 +1,2 @@
+class Joinus < Article
+end

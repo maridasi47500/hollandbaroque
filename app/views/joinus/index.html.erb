@@ -1,0 +1,30 @@
+
+<div class="pages-grid-content">
+  <div class="container">
+    <div class="row">
+      <div class="col-12 col-lg-10 offset-lg-1">
+                
+  <article class="page-content">
+    
+    <h1><%=@page.title%></h1>
+    <%=simple_format(@page.intro, {class: "has-medium-font-size"}, wrapper_tag: "p")%>
+  </article>
+<div class="page-children-wrapper">
+  <div class="row">
+    
+ <%=render collection: @posts, as: :post, partial: "joinus/joinus"%>
+
+
+
+
+  </div>
+</div>	
+
+<%=render "newsletter"%>      
+
+
+</div>
+    </div>
+  </div>
+</div>
+

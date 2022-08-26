@@ -1,0 +1,2 @@
+class Private < Article
+end

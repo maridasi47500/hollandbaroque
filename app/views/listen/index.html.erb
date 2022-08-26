@@ -1,0 +1,144 @@
+<%=content_for :bodyclass do%>post-type-archive-postkl<%end%>
+  <div class="postkl-content">
+    <div class="container">
+    <div class="row">
+        <div class="col-12 col-lg-10 offset-lg-1 postkl-cards postkl-cards-featured">
+            <h1><%=@page.title%></h1>
+            <h2 class="cards-title"><%=t("onpages.featured")%></h2>
+
+            <div class="postkl-cards-cards postkl-cards-cards-featured"> <!-- horizontal, vertical -->
+                <div class="row">
+                    
+
+
+<%=render collection: @featured, as: :post, partial: "listen/featured" %>
+    </div>
+</div>
+ </div>
+</div>
+ </div>
+</div>
+
+<div class="container">
+    <div class="row"> 
+      <div class="postkl-cards postkl-cards-notfeatured col-12 col-lg-10 offset-lg-1">
+        <h2 class="cards-title"><%=t('onpages.watchmore')%></h2>
+        <div class="postkl-filters-wrapper filters-wrapper">
+
+  <button 
+    id="TypeFilter"
+    class="filter-button-main"
+    data-default-label="<%=t('onpages.type')%>">
+    <%=t('onpages.type')%>  </button>
+
+  <div 
+    id="TypeFilterOptions"
+    class="concert-filter postkl-filters"
+    data-state="closed">
+
+    <div 
+      id="TypeDropDownPanel"
+      class="filter-dropdown-panel">
+                <button
+            class="filter-button-option"
+            data-link="/kijkenluister/type/concert/">
+            concert          </button>
+                  <button
+            class="filter-button-option"
+            data-link="/kijkenluister/type/interactieve-tour/">
+            interactieve tour          </button>
+                  <button
+            class="filter-button-option"
+            data-link="/kijkenluister/type/livestream/">
+            livestream          </button>
+                  <button
+            class="filter-button-option"
+            data-link="/kijkenluister/type/mini-docu-2/">
+            mini documentaire          </button>
+                  <button
+            class="filter-button-option"
+            data-link="/kijkenluister/type/podcast/">
+            podcast          </button>
+                  <button
+            class="filter-button-option"
+            data-link="/kijkenluister/type/singer-songwriter/">
+            singer-songwriter          </button>
+                  <button
+            class="filter-button-option"
+            data-link="/kijkenluister/type/single/">
+            single          </button>
+                  <button
+            class="filter-button-option"
+            data-link="/kijkenluister/type/televisie/">
+            televisie          </button>
+                  <button
+            class="filter-button-option"
+            data-link="/kijkenluister/type/video/">
+            video          </button>
+                  <button
+            class="filter-button-option"
+            data-link="/kijkenluister/type/videoclip/">
+            videoclip          </button>
+            </div>
+  </div>
+
+</div>
+        <div id="PostKlCardsNotfeatured"
+          class="postkl-cards-cards postkl-cards-cards-notfeatured"
+          data-reset-link="<%=url_for(action: "index",controller:"listen")%>"
+          data-page="1"
+          data-paged="10"
+          data-term="">
+          <div class="row">
+
+<%=render collection: @firsthalf,partial: "listen/post",as: :post%>
+
+
+                   <div class="col-12">
+                      
+	<div class="block-support-us">
+	<span class="block-support-us-title">
+		<%=t('onpages.support')%>	</span>
+	<div class="block-support-menu">
+
+					<a class="button blank" href="/doe-mee/" title="<%=t('onpages.options')%>">
+				<%=t('onpages.options')%>			</a>
+		
+		<a target="_blank" class="button blank cta" href="#donation" title="<%=t('onpages.donate')%>">
+			<%=t('onpages.donate')%>		</a>
+
+	</div>
+</div>                    </div>
+
+<%=render collection: @secondhalf,partial: "listen/post",as: :post%>
+
+               <button id="MorePostKLButton"
+                  data-found="37"
+                  class="more-postkl-button <%= @moreposts.length > 0 ? "show" : ""%>">
+                  <%=t("onpages.seemore")%>                </button> 
+        
+<%if @firsthalf.length == 0%>
+                    <span id="noPostKL" class="no-postkl-message">
+                No results
+              </span><%end%>
+                      </div>
+        </div>
+      </div>
+    </div>
+</div>  </div>
+  <div class="container">
+    <div class="row">
+      <div class="col-12 col-md-10 offset-md-1">
+        	<div class="block-newsletter-subscribe">
+	<span class="block-newsletter-subscribe-title">
+		Blijf op de hoogte	</span>
+	<span class="block-newsletter-subscribe-subtitle">
+		Schrijf je in voor onze maandelijkse nieuwsbrief en maak kans op een cd	</span>
+	<div class="block-support-menu">
+		<a class="button"
+			href="#newsletter">
+			Abonneer		</a>
+	</div>
+</div>      </div>
+    </div>
+  </div>

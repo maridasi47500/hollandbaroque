@@ -1,0 +1,41 @@
+
+<div class="page-header single-header">
+  <div class="page-header-visual">
+		<img class="concert-card-image"
+			src="<%=@post.image%>"
+			alt="<%=@post.title%>" />
+  </div>
+  <div class="page-header-content">
+    <div class="container">
+      <div class="row">
+        <div class="col-12 col-lg-10 offset-lg-1">
+          <span class="application-date"><%=@post.date%></span>
+          <h1><%=@post.title%></h1>
+          <p><%=@post.subtitle%></p>
+                        <%if (url_for(controller: "etpage",action:"apply",title:@post.url,locale: @currentlocale,apply: "apply-for-#{@post.url}") rescue nil)%>
+                      <a href="<%=url_for(controller: "etpage",action:"apply",title:@post.url,locale: @currentlocale,apply: "apply-for-#{@post.url}")%>"
+              class="button cta round">
+              <%=t('onpages.applynow')%>            
+                            </a>
+                            <%end%>
+                  </div>
+      </div>
+    </div>
+  </div>
+</div>
+    <div class="pageet-content">
+      <div class="container">
+        <div class="row">
+          <div class="col-12 col-lg-10 offset-lg-1">
+            
+
+          <article class="page-content">
+    
+           <%@contents.each do |x|%>
+    
+<%=render "listen/#{x.model_name.singular}", content: x%>
+ 
+    <%end%>
+  </article>        </div>
+      </div>
+    </div>

@@ -1,0 +1,22 @@
+<div class="news-cards news-cards-all row">
+  <div class="col-12">
+    <h1>Nieuws</h1>
+  </div>
+      
+      
+      <div id="NewsCards" class="news-cards-cards col-12"
+        data-paged="<%=params[:page]%>"
+        data-posts-per-page="8"
+        data-link="/index.php?post_type=post">
+        <div class="row">
+          
+                 <%=render collection: @news, as: :news, partial: "news/news"%>
+                            <button id="MoreNewsButton"
+                data-found="<%=@datafound%>"
+                class="more-news-button show">
+                <%=t('onpages.seemore')%>              </button></div>         
+        <span id="noNews" class="no-news-message">
+          No results
+        </span>
+        </div>
+        </div>

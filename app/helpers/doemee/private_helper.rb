@@ -1,0 +1,2 @@
+module Doemee::PrivateHelper
+end

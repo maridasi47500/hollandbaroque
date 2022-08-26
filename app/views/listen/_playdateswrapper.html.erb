@@ -1,0 +1,14 @@
+<div class="playdates-wrapper">
+<%content.concert.playtimes.each do |time|%>
+    <div class="playdate-row row">
+              <div class="details col-12 col-md-5">
+          <span class="date"><%=l(time.date, format: :playtime_date)%></span>
+          <span class="time"><%=l(time.time, format: :playtime_time)%></span>
+          <span class="locations">
+        <%=time.location.city%>, <%=time.location.place%>        </span>
+      </div>
+              <a target="_blank" href="<%=time.link%>" class="playdate-link clickable"><%=time.namelink%></a>
+          </div>
+<%end%>
+      
+  </div>

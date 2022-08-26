@@ -1,0 +1,2 @@
+class Aboutus < Article
+end

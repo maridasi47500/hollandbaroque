@@ -1,0 +1,48 @@
+
+  <div class="page-header single-header page-content-header">
+    <div class="page-header-visual">
+      <img class="concert-card-image"
+        src="<%=@post.image%>"
+        alt="<%=@post.title%>" />
+    </div>
+    <div class="page-header-content">
+      <div class="container">
+        <div class="row">
+          <div class="col-12 col-xl-10 offset-xl-1">
+            <h1><%=@post.title%></h1>
+            <p></p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+<div class="single-page-content content-noimage">
+  <div class="container">
+    <div class="row">
+      <div class="col-12 col-lg-10 offset-lg-1">
+        
+
+          <article class="page-content">
+    
+    
+          <a class="back-link" href="<%=url_for(action: "index", controller: "professionnal")%>" title="<%=t('onpages.backtocommercial')%>"><%=t('onpages.backtocommercial')%></a>
+    
+        <%@post.mycontents.each do |x|%>
+    
+<%=render "listen/#{x.model_name.singular}", content: x%>
+ 
+    <%end%>
+  </article>	<div class="block-newsletter-subscribe">
+	<span class="block-newsletter-subscribe-title">
+		Blijf op de hoogte	</span>
+	<span class="block-newsletter-subscribe-subtitle">
+		Schrijf je in voor onze maandelijkse nieuwsbrief en maak kans op een cd	</span>
+	<div class="block-support-menu">
+		<a class="button"
+			href="#newsletter">
+			Abonneer		</a>
+	</div>
+</div>    </div>
+  </div>
+</div>

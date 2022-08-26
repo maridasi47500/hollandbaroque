@@ -1,0 +1,23 @@
+
+<div class="single-page-content">
+  <div class="musici-cards">
+  <div class="container">
+    <div class="row">
+      <div class="col-12">
+                  <a class="back-link" href="<%=url_for(locale: @¢urrentlocale, controller: "overons", action:"index")%>" title="<%=t('onpages.backtoaboutus')%>"><%=t('onpages.backtoaboutus')%></a>
+                <h1><%=@post.title%></h1>
+      </div>
+    </div>
+  </div>
+    <div class="container">
+      <div class="row">
+        <%=render partial: "overons/musician", as: :musician, collection: @musicians%>
+      </div>
+    </div>
+</div>
+
+
+<div id="MusiciCardPanel" class="musici-panel-overlay off-screen">
+</div></div>
+
+  

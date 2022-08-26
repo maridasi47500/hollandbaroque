@@ -1,0 +1,12 @@
+<div class="musicus-card col-12 col-md-6 col-lg-4" data-link="<%=url_for(controller: "overons", action:"musician", name: musician.link, locale: @currentlocale)%>">
+    <div class="musicus-card-imageblock">
+        <img class="musicus-card-image" width="100%"
+            src="<%=musician.image%>"
+            alt="<%=musician.title%>" />
+    </div>
+    <div class="musicus-card-innerblock">
+        <h2><%=musician.title%></h2>
+        <span class="musicus-card-subtitle">
+            <%=musician.subtitle%>        </span>
+    </div>
+</div>

@@ -1,0 +1,49 @@
+
+
+<div class="news-content">
+  <div class="container">
+    <div class="row">
+      <div class="col-12 col-lg-10 offset-lg-1">
+        <div class="news-cards news-cards-all row">
+  <div class="col-12">
+    <h1><%=@page.title%></h1>
+  </div>
+      
+      
+      <div id="NewsCards" class="news-cards-cards col-12"
+        data-paged="1"
+        data-posts-per-page="8"
+        data-link="/index.php?post_type=post">
+        <div class="row">
+          
+       <%=render collection: @news,as: :news,partial: "news/news"%>           
+              
+                 
+                            <button id="MoreNewsButton"
+                data-found=""
+                class="more-news-button <%= @moreposts.length > 0 ? "show" : ""%>">
+                <%=t("onpages.seemore")%>              </button></div>         
+        <span id="noNews" class="<%= @allposts.length > 0 ? "no-news-message" : ""%>">
+          No results
+        </span>
+        </div>
+        </div>      </div>
+    </div>
+  </div>
+</div>
+<div class="container">
+  <div class="row">
+    <div class="col-12 col-lg-10 offset-lg-1">
+      	<div class="block-newsletter-subscribe">
+	<span class="block-newsletter-subscribe-title">
+		Blijf op de hoogte	</span>
+	<span class="block-newsletter-subscribe-subtitle">
+		Schrijf je in voor onze maandelijkse nieuwsbrief en maak kans op een cd	</span>
+	<div class="block-support-menu">
+		<a class="button"
+			href="#newsletter">
+			Abonneer		</a>
+	</div>
+</div>    </div>
+  </div>
+</div>

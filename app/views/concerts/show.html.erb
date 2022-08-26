@@ -1,0 +1,54 @@
+<div class="page-header single-header">
+  <div class="page-header-visual top">
+		<img class="concert-card-image"
+			src="<%=@concert.image%>"
+			alt="<%=@concert.title%>" />
+  </div>
+  <div class="page-header-content">
+    <div class="container">
+      <div class="row">
+        <div class="col-12 col-xl-10 offset-xl-1">
+          <span class="concert-date"><%=@concert.date%></span>
+          <h1><%=@concert.title%></h1>
+          <p><%=@concert.subtitle%></p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="concert-content">
+  <div class="container">
+    <div class="row">
+      <div class="col-12 col-lg-10 offset-lg-1">
+        
+
+          <article class="page-content">
+    
+            <a class="back-link" href="<%=url_for(controller: 'concerts',action:"index", locale: @¢urrentlocale)%>" title="<%=t('onpages.overview')%>"><%=t('onpages.overview')%></a>
+          <div class="concert-nav-wrapper">
+<%if @concert.previousconcert%>
+            <a href="<%=url_for(title: @concert.previousconcert.url,locale: @currentlocale, action: "show", controller:"concerts")%>" class="previous-concert">
+          <span><%=t('onpages.previous')%></span>
+        </a>
+<%end%>
+<%if @concert.previousconcert && @concert.nextconcert%>
+          <em>|</em>
+<%end%>
+<%if @concert.nextconcert%>
+            <a href="<%=url_for(title: @concert.nextconcert.url,locale: @currentlocale, action: "show", controller:"concerts")%>" class="next-concert">
+          <span><%=t('onpages.nextone')%></span>
+        </a>
+<%end%>
+      </div>
+    
+    <%@contents.each do |x|%>
+    
+<%=render "listen/#{x.model_name.singular}", content: x%>
+ 
+    <%end%>
+    
+
+  </article>      </div>
+    </div>
+  </div>
+</div>

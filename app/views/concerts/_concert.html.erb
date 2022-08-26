@@ -1,0 +1,33 @@
+<a href="<%=url_for(controller: "concerts",action:"show", title: concert.url, locale: @currentlocale)%>" title="<%=concert.title%>" class="concert-card concert-card-swiper swiper-slide"
+    data-location="<%=JSON.parse(concert.listlocations).join(',').downcase.gsub(" ",'+')%>"
+    data-month="<%=JSON.parse(concert.listmonths).join(',').downcase.gsub(' ','+')%>">
+    <div class="inner">
+        <div class="concert-card-imageblock">
+            <img class="concert-card-image"
+                src="<%=concert.image%>"
+                alt="<%=concert.title%>" />
+        </div>
+        <div class="concert-card-innerblock">
+            <span class="concert-card-date">
+                <%=concert.date%>            </span>
+            <h2 class="concert-card-title">
+                <%=concert.title%>            </h2>
+            <h4 class="concert-card-subtitle">
+                <%=concert.subtitle%>            </h4>
+            <div class="concert-card-tags card-tags">
+                                  <%if concert.playtimes.length == 1%>
+                                            <span class="card-tag">
+                  <%=JSON.parse(concert.listlocations).join(',').downcase.gsub(" ",'+')%>                </span>
+            <%elsif concert.playtimes.length > 1%>
+                                            <span class="card-tag">
+                 <%=t("nblocation",count: concert.playtimes.length)%> </span>
+                 <%end%>
+            <%if concert.nblivestreams > 0%>
+                                            <span class="card-tag">
+                  <%=t("nblivestreams", count: concert.nblivestreams)%>                 </span>
+
+            <%end%>
+                                            </div>
+        </div>
+    </div>
+</a>

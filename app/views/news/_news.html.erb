@@ -1,0 +1,16 @@
+<div class="news-card news-card-default col-12 col-md-6">
+    <a class="news-card-imageblock" href="<%=url_for(controller: "news",action:"show", title: news.url, locale: @currentlocale)%>" title="<%=news.title%>">
+        <img class="news-card-image"
+            src="<%=news.image%>"
+            alt="<%=news.title%>" />
+        <span class="card-tag">
+            <%=news.date%>        </span>
+    </a>
+    <div class="news-card-innerblock">
+        <h2 class="news-card-title">
+            <a href="<%=url_for(controller: "news",action:"show", title: news.url, locale: @currentlocale)%>" title="<%=news.title%>">
+            <%=news.title%>            </a>
+        </h2>
+        <%=news.subtitle%>    
+    </div>
+</div>

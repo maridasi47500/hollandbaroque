@@ -1,0 +1,48 @@
+
+  <div class="page-header single-header page-content-header">
+    <div class="page-header-visual">
+      <img class="concert-card-image"
+        src="/wp-content/uploads/2022/04/Persfoto-Holland-Baroque-Foto-Wouter-Jansen-2-1-1920x1587.jpg"
+        alt="Over Holland Baroque" />
+    </div>
+    <div class="page-header-content">
+      <div class="container">
+        <div class="row">
+          <div class="col-12 col-lg-10 offset-lg-1">
+                          <%=render partial: "overons/quote", collection: @post.quotes, as: :quote%>
+                      </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="single-page-content">
+
+  <div class="container">
+    <div class="row">
+      <div class="col-12 col-lg-10 offset-lg-1">
+        
+  <article class="page-content">
+    
+    <h1><%=@post.title%></h1>
+    
+<%@contents.each do |x|%>
+    
+<%=render "listen/#{x.model_name.singular}", content: x%>
+ 
+    <%end%>
+
+
+ </article>
+	<div class="block-newsletter-subscribe">
+	<span class="block-newsletter-subscribe-title">
+		Blijf op de hoogte	</span>
+	<span class="block-newsletter-subscribe-subtitle">
+		Schrijf je in voor onze maandelijkse nieuwsbrief en maak kans op een cd	</span>
+	<div class="block-support-menu">
+		<a class="button"
+			href="#newsletter">
+			Abonneer		</a>
+	</div>
+</div>    </div>
+  </div>
+</div>

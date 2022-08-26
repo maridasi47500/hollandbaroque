@@ -1,0 +1,89 @@
+<div class="container">
+    <div class="row"> 
+      <div class="postkl-cards postkl-cards-notfeatured col-12 col-lg-10 offset-lg-1">
+        <h2 class="cards-title">Meer kijk en luister</h2>
+        <div class="postkl-filters-wrapper filters-wrapper">
+
+  <button 
+    id="TypeFilter"
+    class="filter-button-main"
+    data-default-label="Type">
+    Type  </button>
+
+  <div 
+    id="TypeFilterOptions"
+    class="concert-filter postkl-filters"
+    data-state="closed">
+
+    <div 
+      id="TypeDropDownPanel"
+      class="filter-dropdown-panel">
+                <button
+            class="filter-button-option"
+            data-link="https://www.hollandbaroque.com/kijkenluister/type/concert/">
+            concert          </button>
+                  <button
+            class="filter-button-option"
+            data-link="https://www.hollandbaroque.com/kijkenluister/type/interactieve-tour/">
+            interactieve tour          </button>
+                  <button
+            class="filter-button-option"
+            data-link="https://www.hollandbaroque.com/kijkenluister/type/livestream/">
+            livestream          </button>
+                  <button
+            class="filter-button-option"
+            data-link="https://www.hollandbaroque.com/kijkenluister/type/mini-docu-2/">
+            mini documentaire          </button>
+                  <button
+            class="filter-button-option"
+            data-link="https://www.hollandbaroque.com/kijkenluister/type/podcast/">
+            podcast          </button>
+                  <button
+            class="filter-button-option"
+            data-link="https://www.hollandbaroque.com/kijkenluister/type/singer-songwriter/">
+            singer-songwriter          </button>
+                  <button
+            class="filter-button-option"
+            data-link="https://www.hollandbaroque.com/kijkenluister/type/single/">
+            single          </button>
+                  <button
+            class="filter-button-option"
+            data-link="https://www.hollandbaroque.com/kijkenluister/type/televisie/">
+            televisie          </button>
+                  <button
+            class="filter-button-option"
+            data-link="https://www.hollandbaroque.com/kijkenluister/type/video/">
+            video          </button>
+                  <button
+            class="filter-button-option"
+            data-link="https://www.hollandbaroque.com/kijkenluister/type/videoclip/">
+            videoclip          </button>
+            </div>
+  </div>
+
+</div>
+        <div id="PostKlCardsNotfeatured"
+          class="postkl-cards-cards postkl-cards-cards-notfeatured"
+          data-reset-link="<%=url_for(controller: "listen", action: "index")%>"
+          data-page="<%=params[:page]%>"
+          data-paged="<%=@allposts.length / 10 + 1%>"
+          data-term="">
+          <div class="row">
+            <%=render collection: @posts, as: :post, partial: "listen/post" %>
+            
+
+ <button id="MorePostKLButton"
+                  data-found="<%=@datafound%>"
+                  class="more-postkl-button <%= @moreposts.length > 0 && @posts.lenth > 0 ? "show" : "hide"%>">
+                  <%=t("onpages.seemore")%>                </button> 
+
+
+                            <span id="noPostKL" class="<%= @datafound == 0 ? "no-postkl-message" : ""%>">
+                No results
+              </span>
+
+                      </div>
+        </div>
+      </div>
+    </div>
+</div>

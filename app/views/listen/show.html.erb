@@ -1,0 +1,76 @@
+<div class="page-header split-header">
+  <div class="container">
+    <div class="row">
+      <div class="page-header-content col-12 col-lg-6">
+        <a class="back-link" href="<%=url_for(controller: "listen", action: "index")%>" title="<%=t('onpages.backkl')%>"><%=t('onpages.backkl')%></a>
+        <h1><%=@post.title%></h1>
+        <p><%=@post.subtitle%></p>
+      </div>
+      <div class="col-12 col-lg-6 page-header-visual">
+        <img class="concert-card-image"
+          src="<%=@post.image%>"
+          alt="<%=@post.title%>" />
+      </div>
+    </div>
+  </div>
+</div><div id="DonationOverlay" class="donation-overlay off-screen" onclick="window.closeOffscreenDonation()"></div>
+<nav id="Donation" class="donation off-screen">
+    <button class="close-button" onclick="window.closeOffscreenDonation()"></button>
+            <iframe src="https://forms.hollandbaroque.com/donatie" height="100%" width="100%" title="Inschrijfformulier nieuwsbrief"></iframe>
+    </nav><div id="FriendOverlay" class="friend-overlay off-screen" onclick="window.closeOffscreenFriend()"></div>
+<nav id="Friend" class="friend off-screen">
+    <button class="close-button" onclick="window.closeOffscreenFriend()"></button>
+            <iframe src="https://forms.hollandbaroque.com/vriend?language=nl" height="100%" width="100%" title="Word vriend"></iframe>
+    </nav>
+<div class="postkl-content">
+  <div class="container">
+    <div class="row">
+      <div class="col-12 col-lg-10 offset-lg-1">
+        
+
+          <article class="page-content">
+    
+    
+    <%@contents.each do |x|%>
+    
+<%=render "listen/#{x.model_name.singular}", content: x%>
+ 
+    <%end%>
+
+
+
+
+
+
+  </article>
+<%if @post.otherarticles.length > 0%>
+<div id="content" class="postkl-cards postkl-cards-related">
+	<h2 class="cards-title"><%=t('onpages.related')%></h2>
+	<div class="postkl-cards-cards">
+		<div class="row">
+			
+<!--- more articles here --->
+<%=render collection: @post.otheraticles, as: :post, partial: "listen/post" %>
+
+		</div>
+	</div>
+	<div class="concert-cards-archive">
+		<a class="more-link" href="<%=url_for(controller: "listen", action: "index")%>" title="<%=t('onpages.listenmore1')%>">
+			<%=t('onpages.listenmore1')%>		</a>
+	</div>
+</div>
+<%end%>
+
+	<div class="block-newsletter-subscribe">
+	<span class="block-newsletter-subscribe-title">
+		Blijf op de hoogte	</span>
+	<span class="block-newsletter-subscribe-subtitle">
+		Schrijf je in voor onze maandelijkse nieuwsbrief en maak kans op een cd	</span>
+	<div class="block-support-menu">
+		<a class="button"
+			href="#newsletter">
+			Abonneer		</a>
+	</div>
+</div>    </div>
+  </div>
+</div>

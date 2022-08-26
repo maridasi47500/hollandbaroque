@@ -1,0 +1,337 @@
+<div class="concerts-content">
+  <div class="concerts-slider-wrapper">
+
+      <div class="title-wrapper">
+        <h1>Concerten</h1>
+        <div class="row">
+          <div id="ConcertFilters" class="concert-filters-wrapper filters-wrapper col-12">
+
+  <div class="button-wrappers">
+    <button id="LocationFilter" class="filter-button-main" data-default-label="Locatie">Locatie</button>
+
+    <button id="MonthFilter" class="filter-button-main" data-default-label="Maand">Maand</button>
+  </div>
+
+  <div id="ConcertFilterLocations" class="concert-filter concert-filter-location" data-state="closed">
+
+    <div id="LocationDropDownPanel" class="filter-dropdown-panel">
+                <button class="filter-button-option" data-location-term-slug="amersfoort" data-location-term-id="170" data-related-months="11,12">
+            Amersfoort          </button>
+                  <button class="filter-button-option" data-location-term-slug="amsterdam" data-location-term-id="160" data-related-months="11,12,11,12,12,03,04,05">
+            Amsterdam          </button>
+                  <button class="filter-button-option" data-location-term-slug="arnhem" data-location-term-id="39" data-related-months="09,10,11,12,02">
+            Arnhem          </button>
+                  <button class="filter-button-option" data-location-term-slug="batenburg" data-location-term-id="172" data-related-months="08">
+            Batenburg          </button>
+                  <button class="filter-button-option" data-location-term-slug="cuijk" data-location-term-id="97" data-related-months="09,10,10,11,12,03,04">
+            Cuijk          </button>
+                  <button class="filter-button-option" data-location-term-slug="darmstadt%2b%2528duitsland%2529" data-location-term-id="185" data-related-months="02,06">
+            Darmstadt (Duitsland)          </button>
+                  <button class="filter-button-option" data-location-term-slug="de%2bmeern%2b%2528utrecht%2529" data-location-term-id="181" data-related-months="02,06">
+            De Meern (Utrecht)          </button>
+                  <button class="filter-button-option" data-location-term-slug="den%2bbosch" data-location-term-id="169" data-related-months="11,12">
+            Den Bosch          </button>
+                  <button class="filter-button-option" data-location-term-slug="den%2bhaag" data-location-term-id="96" data-related-months="09,10,11,12,02">
+            Den Haag          </button>
+                  <button class="filter-button-option" data-location-term-slug="enschede" data-location-term-id="180" data-related-months="02,06">
+            Enschede          </button>
+                  <button class="filter-button-option" data-location-term-slug="gouda" data-location-term-id="161" data-related-months="11,12">
+            Gouda          </button>
+                  <button class="filter-button-option" data-location-term-slug="haarlem" data-location-term-id="40" data-related-months="11,12,02">
+            Haarlem          </button>
+                  <button class="filter-button-option" data-location-term-slug="heerlen" data-location-term-id="179" data-related-months="02">
+            Heerlen          </button>
+                  <button class="filter-button-option" data-location-term-slug="helmond" data-location-term-id="159" data-related-months="11,12,03,04,05">
+            Helmond          </button>
+                  <button class="filter-button-option" data-location-term-slug="keulen%2b%2528duitsland%2529" data-location-term-id="37" data-related-months="01">
+            Keulen (Duitsland)          </button>
+                  <button class="filter-button-option" data-location-term-slug="leeuwarden" data-location-term-id="121" data-related-months="09,10,11,12,02,03,04">
+            Leeuwarden          </button>
+                  <button class="filter-button-option" data-location-term-slug="maastricht" data-location-term-id="167" data-related-months="11,12">
+            Maastricht          </button>
+                  <button class="filter-button-option" data-location-term-slug="nijmegen" data-location-term-id="44" data-related-months="11,12">
+            Nijmegen          </button>
+                  <button class="filter-button-option" data-location-term-slug="rotterdam" data-location-term-id="132" data-related-months="09,10">
+            Rotterdam          </button>
+                  <button class="filter-button-option" data-location-term-slug="spanje" data-location-term-id="183" data-related-months="03,04">
+            Spanje          </button>
+                  <button class="filter-button-option" data-location-term-slug="thuringen%2b%2528duitsland%2529" data-location-term-id="184" data-related-months="03,04">
+            Thüringen (Duitsland)          </button>
+                  <button class="filter-button-option" data-location-term-slug="tilburg" data-location-term-id="168" data-related-months="11,12">
+            Tilburg          </button>
+                  <button class="filter-button-option" data-location-term-slug="utrecht" data-location-term-id="158" data-related-months="09,10,10,11,11,12,02,03,04,05">
+            Utrecht          </button>
+                  <button class="filter-button-option" data-location-term-slug="vries" data-location-term-id="182" data-related-months="03,04">
+            Vries          </button>
+                  <button class="filter-button-option" data-location-term-slug="wageningen" data-location-term-id="162" data-related-months="11,12">
+            Wageningen          </button>
+                  <button class="filter-button-option" data-location-term-slug="zutphen" data-location-term-id="164" data-related-months="11,12">
+            Zutphen          </button>
+                  <button class="filter-button-option" data-location-term-slug="zwolle" data-location-term-id="173" data-related-months="09,10">
+            Zwolle          </button>
+            </div>
+  </div>
+
+  <div id="ConcertFilterMonths" class="concert-filter concert-filter-months" data-state="closed">
+
+    <div id="MonthDropDownPanel" class="filter-dropdown-panel">
+                <button class="filter-button-option" data-month-slug="januari" data-month-number="01" data-related-locations="37">
+            januari          </button>
+                  <button class="filter-button-option" data-month-slug="februari" data-month-number="02" data-related-locations="38,39,96,116,121,179,180,181,185">
+            februari          </button>
+                  <button class="filter-button-option" data-month-slug="maart" data-month-number="03" data-related-locations="58,97,121,159,174,182,183,184">
+            maart          </button>
+                  <button class="filter-button-option" data-month-slug="april" data-month-number="04" data-related-locations="58,97,121,159,174,182,183,184">
+            april          </button>
+                  <button class="filter-button-option" data-month-slug="mei" data-month-number="05" data-related-locations="38,134,175">
+            mei          </button>
+                  <button class="filter-button-option" data-month-slug="juni" data-month-number="06" data-related-locations="180,181,185">
+            juni          </button>
+                  <button class="filter-button-option" data-month-slug="augustus" data-month-number="08" data-related-locations="172">
+            augustus          </button>
+                  <button class="filter-button-option" data-month-slug="september" data-month-number="09" data-related-locations="39,96,97,121,132,158,173">
+            september          </button>
+                  <button class="filter-button-option" data-month-slug="oktober" data-month-number="10" data-related-locations="39,96,97,121,132,158,173,97,174">
+            oktober          </button>
+                  <button class="filter-button-option" data-month-slug="november" data-month-number="11" data-related-locations="38,38,39,40,44,115,136,159,160,161,162,164,165,166,167,168,169,170">
+            november          </button>
+                  <button class="filter-button-option" data-month-slug="december" data-month-number="12" data-related-locations="38,39,40,44,115,136,159,160,161,162,164,165,166,167,168,169,170,58">
+            december          </button>
+            </div>
+  </div>
+
+</div>        </div>
+
+  </div>
+
+    <div id="ConcertSwiper" class="content-block-swiper concert-cards swiper-container concert-swiper-container swiper-initialized swiper-horizontal swiper-pointer-events swiper-free-mode">
+    <div class="swiper-wrapper" id="swiper-wrapper-f6c540b36a78741e" aria-live="polite" style="cursor: grab; transform: translate3d(0px, 0px, 0px);"> 
+    <a href="/concerten/baroque/" title="Baroque!" class="concert-card concert-card-swiper swiper-slide swiper-slide-active" data-location="batenburg" data-month="08" role="group" aria-label="1 / 11" style="width: 303.478px;">
+    <div class="inner">
+        <div class="concert-card-imageblock">
+            <img class="concert-card-image" src="/wp-content/uploads/2022/05/20161111_MG_8604-1200x800.jpg" alt="Baroque!">
+        </div>
+        <div class="concert-card-innerblock">
+            <span class="concert-card-date">
+                27 augustus            </span>
+            <h2 class="concert-card-title">
+                Baroque!            </h2>
+            <h4 class="concert-card-subtitle">
+                Met Erik Bosgraaf (blokfluit)            </h4>
+            <div class="concert-card-tags card-tags">
+                                    <span class="card-tag">
+                        Batenburg                    </span>
+                                            </div>
+        </div>
+    </div>
+</a><a href="/concerten/holland-baroque-theotime-langlois-de-swarte/" title="Holland Baroque en Théotime Langlois de Swarte" class="concert-card concert-card-swiper swiper-slide swiper-slide-next" data-location="arnhem,den+haag,cuijk,leeuwarden,rotterdam,utrecht,zwolle" data-month="09,10" role="group" aria-label="2 / 11" style="width: 303.478px;">
+    <div class="inner">
+        <div class="concert-card-imageblock">
+            <img class="concert-card-image" src="/wp-content/uploads/2022/05/20191218pv_jeanbaptistemillot_02-2-800x1200.jpg" alt="Holland Baroque en Théotime Langlois de Swarte">
+        </div>
+        <div class="concert-card-innerblock">
+            <span class="concert-card-date">
+                28 sep -  7 okt            </span>
+            <h2 class="concert-card-title">
+                Holland Baroque en Théotime Langlois de Swarte            </h2>
+            <h4 class="concert-card-subtitle">
+                Blik op de Italiaanse vioolcultuur            </h4>
+            <div class="concert-card-tags card-tags">
+                                    <span class="card-tag">
+                        7 Locaties                    </span>
+                                            </div>
+        </div>
+    </div>
+</a><a href="/concerten/brabant-1653-3/" title="Brabant 1653" class="concert-card concert-card-swiper swiper-slide" data-location="cuijk,utrecht" data-month="10" role="group" aria-label="3 / 11" style="width: 303.478px;">
+    <div class="inner">
+        <div class="concert-card-imageblock">
+            <img class="concert-card-image" src="/wp-content/uploads/2021/02/PV-Brabant-1653-2700-4-901x1200.jpg" alt="Brabant 1653">
+        </div>
+        <div class="concert-card-innerblock">
+            <span class="concert-card-date">
+                15 okt &amp; 16 okt            </span>
+            <h2 class="concert-card-title">
+                Brabant 1653            </h2>
+            <h4 class="concert-card-subtitle">
+                Verborgen parels uit een vergeten Brabant            </h4>
+            <div class="concert-card-tags card-tags">
+                                    <span class="card-tag">
+                        2 Locaties                    </span>
+                                            </div>
+        </div>
+    </div>
+</a><a href="/concerten/utrecht-900/" title="Utrecht 900" class="concert-card concert-card-swiper swiper-slide" data-location="utrecht" data-month="11" role="group" aria-label="4 / 11" style="width: 303.478px;">
+    <div class="inner">
+        <div class="concert-card-imageblock">
+            <img class="concert-card-image" src="/wp-content/uploads/2022/06/20151126_MG_7379_v4-1200x800.jpg" alt="Utrecht 900">
+        </div>
+        <div class="concert-card-innerblock">
+            <span class="concert-card-date">
+                11 november            </span>
+            <h2 class="concert-card-title">
+                Utrecht 900            </h2>
+            <h4 class="concert-card-subtitle">
+                Feestelijk slotconcert            </h4>
+            <div class="concert-card-tags card-tags">
+                                    <span class="card-tag">
+                        Utrecht                    </span>
+                                            </div>
+        </div>
+    </div>
+</a><a href="/concerten/love-is-crazy/" title="Love is Crazy" class="concert-card concert-card-swiper swiper-slide" data-location="utrecht,arnhem,haarlem,nijmegen,leeuwarden,den+haag,helmond,amsterdam,gouda,wageningen,zutphen,amsterdam,cuijk,maastricht,tilburg,den+bosch,amersfoort" data-month="11,12" role="group" aria-label="5 / 11" style="width: 303.478px;">
+    <div class="inner">
+        <div class="concert-card-imageblock">
+            <img class="concert-card-image" src="/wp-content/uploads/2022/05/171117_8477-2-1200x800.jpg" alt="Love is Crazy">
+        </div>
+        <div class="concert-card-innerblock">
+            <span class="concert-card-date">
+                20 nov - 21 dec            </span>
+            <h2 class="concert-card-title">
+                Love is Crazy            </h2>
+            <h4 class="concert-card-subtitle">
+                Met Sven Ratzke            </h4>
+            <div class="concert-card-tags card-tags">
+                                    <span class="card-tag">
+                        17 Locaties                    </span>
+                                            </div>
+        </div>
+    </div>
+</a><a href="/concerten/kerstspel-2/" title="Kerstspel" class="concert-card concert-card-swiper swiper-slide" data-location="amsterdam" data-month="12" role="group" aria-label="6 / 11" style="width: 303.478px;">
+    <div class="inner">
+        <div class="concert-card-imageblock">
+            <img class="concert-card-image" src="/wp-content/uploads/2021/03/kerstspel.jpg" alt="Kerstspel">
+        </div>
+        <div class="concert-card-innerblock">
+            <span class="concert-card-date">
+                16 - 18 december            </span>
+            <h2 class="concert-card-title">
+                Kerstspel            </h2>
+            <h4 class="concert-card-subtitle">
+                Met Nieuw Vocaal Amsterdam            </h4>
+            <div class="concert-card-tags card-tags">
+                                    <span class="card-tag">
+                        Amsterdam                    </span>
+                                            </div>
+        </div>
+    </div>
+</a><a href="/concerten/silk-baroque-3/" title="Silk Baroque" class="concert-card concert-card-swiper swiper-slide" data-location="keulen+%28duitsland%29" data-month="01" role="group" aria-label="7 / 11" style="width: 303.478px;">
+    <div class="inner">
+        <div class="concert-card-imageblock">
+            <img class="concert-card-image" src="/wp-content/uploads/2022/02/projectvisual_silkbaroque_background_clean_hir-899x1200.jpg" alt="Silk Baroque">
+        </div>
+        <div class="concert-card-innerblock">
+            <span class="concert-card-date">
+                 1 januari            </span>
+            <h2 class="concert-card-title">
+                Silk Baroque            </h2>
+            <h4 class="concert-card-subtitle">
+                Met Wu Wei (sheng)            </h4>
+            <div class="concert-card-tags card-tags">
+                                    <span class="card-tag">
+                        Keulen (Duitsland)                    </span>
+                                            </div>
+        </div>
+    </div>
+</a><a href="/concerten/bach-en-eisler/" title="Bach en Eisler" class="concert-card concert-card-swiper swiper-slide" data-location="utrecht,arnhem,den+haag,haarlem,leeuwarden,heerlen" data-month="02" role="group" aria-label="8 / 11" style="width: 303.478px;">
+    <div class="inner">
+        <div class="concert-card-imageblock">
+            <img class="concert-card-image" src="/wp-content/uploads/2022/05/Projectvisual-Oliemans.jpg" alt="Bach en Eisler">
+        </div>
+        <div class="concert-card-innerblock">
+            <span class="concert-card-date">
+                 4 - 17 februari            </span>
+            <h2 class="concert-card-title">
+                Bach en Eisler            </h2>
+            <h4 class="concert-card-subtitle">
+                Met Thomas Oliemans (bariton)            </h4>
+            <div class="concert-card-tags card-tags">
+                                    <span class="card-tag">
+                        6 Locaties                    </span>
+                                            </div>
+        </div>
+    </div>
+</a><a href="/concerten/bachs-konigin-3/" title="Bachs Königin" class="concert-card concert-card-swiper swiper-slide" data-location="enschede,de+meern+%28utrecht%29,darmstadt+%28duitsland%29" data-month="02,06" role="group" aria-label="9 / 11" style="width: 303.478px;">
+    <div class="inner">
+        <div class="concert-card-imageblock">
+            <img class="concert-card-image" src="/wp-content/uploads/2021/04/191114_-1200x900.jpg" alt="Bachs Königin">
+        </div>
+        <div class="concert-card-innerblock">
+            <span class="concert-card-date">
+                 9 feb - 14 jun            </span>
+            <h2 class="concert-card-title">
+                Bachs Königin            </h2>
+            <h4 class="concert-card-subtitle">
+                Bachs orgelwerken voor orkest            </h4>
+            <div class="concert-card-tags card-tags">
+                                    <span class="card-tag">
+                        3 Locaties                    </span>
+                                            </div>
+        </div>
+    </div>
+</a><a href="/concerten/tranen-van-brabant/" title="Tranen van Brabant" class="concert-card concert-card-swiper swiper-slide" data-location="amsterdam,cuijk,leeuwarden,helmond,utrecht,vries,spanje,th%c3%bcringen+%28duitsland%29" data-month="03,04" role="group" aria-label="10 / 11" style="width: 303.478px;">
+    <div class="inner">
+        <div class="concert-card-imageblock">
+            <img class="concert-card-image" src="/wp-content/uploads/2022/07/110610_8111-2_v6_staand_dicht-800x1200.jpg" alt="Tranen van Brabant">
+        </div>
+        <div class="concert-card-innerblock">
+            <span class="concert-card-date">
+                24 mrt -  7 apr            </span>
+            <h2 class="concert-card-title">
+                Tranen van Brabant            </h2>
+            <h4 class="concert-card-subtitle">
+                17de-eeuwse passiemuziek            </h4>
+            <div class="concert-card-tags card-tags">
+                                    <span class="card-tag">
+                        8 Locaties                    </span>
+                                            </div>
+        </div>
+    </div>
+</a><a href="/concerten/holland-baroque-en-julie-roset/" title="Holland Baroque en Julie Roset" class="concert-card concert-card-swiper swiper-slide" data-location="utrecht,amsterdam,helmond" data-month="05" role="group" aria-label="11 / 11" style="width: 303.478px;">
+    <div class="inner">
+        <div class="concert-card-imageblock">
+            <img class="concert-card-image" src="/wp-content/uploads/2022/05/20210606pv_julieroset_01-2-800x1200.jpg" alt="Holland Baroque en Julie Roset">
+        </div>
+        <div class="concert-card-innerblock">
+            <span class="concert-card-date">
+                19 - 21 mei            </span>
+            <h2 class="concert-card-title">
+                Holland Baroque en Julie Roset            </h2>
+            <h4 class="concert-card-subtitle">
+                Twee eeuwen Franse zangkunst            </h4>
+            <div class="concert-card-tags card-tags">
+                                    <span class="card-tag">
+                        3 Locaties                    </span>
+                                            </div>
+        </div>
+    </div>
+</a>    </div>
+    <div class="swiper-navs">
+      <div class="swiper-button-prev swiper-button-disabled" tabindex="-1" role="button" aria-label="Previous slide" aria-controls="swiper-wrapper-f6c540b36a78741e" aria-disabled="true"></div>
+      <!-- Add Pagination -->
+      <!-- <div class="swiper-pagination"></div> -->
+      <!-- Add Arrows -->
+      <div class="swiper-button-next" tabindex="0" role="button" aria-label="Next slide" aria-controls="swiper-wrapper-f6c540b36a78741e" aria-disabled="false"></div>
+    </div>
+  <span class="swiper-notification" aria-live="assertive" aria-atomic="true"></span></div></div>  <div class="container">
+    <div class="row">
+      <div class="col-12 col-lg-10 offset-lg-1">
+        
+
+          <article class="page-content">
+    
+    
+    
+    
+  </article>	<div class="block-newsletter-subscribe">
+	<span class="block-newsletter-subscribe-title">
+		Blijf op de hoogte	</span>
+	<span class="block-newsletter-subscribe-subtitle">
+		Schrijf je in voor onze maandelijkse nieuwsbrief en maak kans op een cd	</span>
+	<div class="block-support-menu">
+		<a class="button" href="#newsletter">
+			Abonneer		</a>
+	</div>
+</div>      </div>
+    </div>
+  </div>
+</div>

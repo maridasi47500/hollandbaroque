@@ -1,0 +1,29 @@
+
+<div class="pages-grid-content">
+  <div class="container">
+    <div class="row">
+      <div class="col-12 col-lg-10 offset-lg-1">
+                  <a class="back-link" href="<%=I18n.locale == :en ? joinus_en_path(locale: @currentlocale) : joinus_nl_path(locale: @currentlocale)%>" title="<%=t('onpages.backtojoinus1')%>"><%=t('onpages.backtojoinus2')%></a>
+                
+  <article class="page-content">
+    
+    <h1><%=@page.title%></h1>
+    
+<p><%=@page.subtitle%></p>
+  </article>
+<div class="page-children-wrapper">
+  <div class="row">
+    
+  <%=render collection: @posts, partial: "joinus/private", as: :post%>
+
+  </div>
+</div>	
+
+<%=render "newsletter"%>      
+
+
+ </div>
+    </div>
+  </div>
+</div>
+

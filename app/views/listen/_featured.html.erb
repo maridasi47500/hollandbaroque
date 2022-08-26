@@ -1,0 +1,22 @@
+<div class="card postkl-card postkl-card-featured col-12 col-lg-6"
+    onclick="window.location.href='<%=url_for(action: "show", controller:"listen",locale: @currentlocale, title: post.url)%>';">
+    <div class="postkl-card-imageblock">
+        <img class="postkl-card-image"
+            src="https://www.hollandbaroque.com<%=post.image%>"
+            alt="<%=post.title%>" />
+    </div>
+    <div class="postkl-card-innerblock">
+        <h2 class="postkl-card-title">
+            <%=post.title%>        </h2>
+
+        <h4 class="postkl-card-subtitle">
+            <%=post.subtitle%>        </h4>
+
+        <div class="postkl-card-tags card-tags">
+<%post.tags.each do |tag|%>
+                                <a class="postkl-card-type card-tag <%=tag.url%>" href="<%=url_for(controller: "listen", action: "type", tag: tag.url, locale: I18n.locale)%>">
+                        <%=tag.name%></a>
+                                <%end%>
+            		</div>
+    </div>
+</div>

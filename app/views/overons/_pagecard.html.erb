@@ -1,0 +1,16 @@
+<div class="page-card col-12 col-md-6">
+    <a class="page-card-imageblock" href="<%=post.musicians.length > 0 ? url_for(action: "musicians", controller:"overons", title: post.url, locale: @currentlocale) : url_for(action: "show", controller:"overons", title: post.url, locale: @currentlocale)%>" title="<%=post.title%>">
+      <img class="page-card-image"
+          src="<%=post.image%>"
+          alt="<%=post.title%>" />
+    </a>
+    <div class="page-card-innerblock">
+      <h2 class="page-card-title">
+        <a href="<%=post.musicians.length > 0 ? url_for(action: "musicians", controller:"overons", title: post.url, locale: @currentlocale) : url_for(action: "show", controller:"overons", title: post.url, locale: @currentlocale)%>" title="<%=post.title%>">
+          <%=post.title%>        </a>
+      </h2>
+      <p><%=post.subtitle%></p>
+      <a href="<%=post.musicians.length > 0 ? url_for(action: "musicians", controller:"overons", title: post.url, locale: @currentlocale) : url_for(action: "show", controller:"overons", title: post.url, locale: @currentlocale)%>" class="more-link" title="<%=post.title%>">
+        <%=t('onpages.readmore')%>      </a>
+    </div>
+  </div>

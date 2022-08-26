@@ -1,0 +1,21 @@
+<a href="<%=url_for(action: "show", controller:"listen",locale: I18n.locale, title: post.url)%>" title="<%=post.title%>" class="card postkl-card postkl-card-default col-12 col-lg-4">
+	<div class="postkl-card-imageblock">
+		<img class="postkl-card-image"
+			src="<%=post.image%>"
+			alt="<%=post.title%>" />
+	</div>
+
+	<div class="postkl-card-innerblock">
+			<h2 class="postkl-card-title">
+				<%=post.title%>			</h2>
+			<h4 class="postkl-card-subtitle">
+					<%=post.subtitle%>			</h4>
+			<div class="postkl-card-tags card-tags">
+                        <%post.tags.each do |tag|%>
+											<span class="postkl-card-type card-tag <%=tag.url%>">
+								<%=tag.name%>							</span>
+                                                                <%end%>
+						
+							</div>
+	</div>
+</a>

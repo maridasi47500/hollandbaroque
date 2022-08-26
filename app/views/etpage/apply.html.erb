@@ -1,0 +1,32 @@
+
+<div class="page-header split-header childpage-header">
+  <div class="container">
+    <div class="row">
+      <div class="page-header-content col-12 col-lg-6">
+        <a class="back-link" href="<%=url_for(controller: "etpage", action: "show", title: @post.url, locale: @currentlocale)%>" title="<%=t("onpages.backto", backto: @mypost.title)%>">Back to Samama fellowship</a>
+        <h1><%=@post.title%></h1>
+              </div>
+      <div class="col-12 col-lg-6 page-header-visual">
+      <img class="concert-card-image"
+          src="<%=@post.image%>"
+          alt="<%=@post.title%>" />
+      </div>
+    </div>
+  </div>
+</div>
+    <div class="pageet-content childpage-content">
+      <div class="container">
+        <div class="row">
+          <div class="col-12 col-lg-10 offset-lg-1">
+            
+
+          <article class="page-content">
+     <%@contents.each do |x|%>
+    
+<%=render "listen/#{x.model_name.singular}", content: x%>
+ 
+    <%end%>
+  </article>        </div>
+      </div>
+    </div>
+
