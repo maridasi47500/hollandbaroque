@@ -9,7 +9,7 @@ render template: "overons/partners_#{I18n.locale}.html.erb"
 render template: "overons/perskit_#{I18n.locale}.html.erb"
   end
    def index
-@posts=Aboutus.all
+@posts=Aboutus.all.where.not("title_#{I18n.locale}",["",nil])
   end
 def musicians
 @post=Aboutus.findbyurl(params[:title])

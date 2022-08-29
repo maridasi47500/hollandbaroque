@@ -1,0 +1,17 @@
+<a class="card concert-card concert-card-search col-12 col-md-6" href="<%=url_for(controller: post.mycontrollername, action: "show", title: post.url, locale: @currentlocale)%>" title="<%=post.title%>">
+	<div class="concert-card-imageblock center">
+		<img class="concert-card-image"
+			src="<%=post.image%>"
+			alt="<%=post.title%>" />
+</div>
+	<div class="concert-card-innerblock">
+		<span class="concert-card-date">
+				<%=post.date%>		</span>
+		<h2 class="concert-card-title">
+				<%=post.title%>		</h2>
+		<h4 class="concert-card-subtitle">
+				<%=post.subtitle%>		</h4>
+		<div class="concert-card-tags card-tags">
+								</div>
+	</div>
+</a>

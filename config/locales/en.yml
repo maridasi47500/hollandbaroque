@@ -27,6 +27,9 @@ en:
     presskit: "Press kit" 
     msgfooter: "Our activities are made possible in part by a contribution from the Ministry of Education, Culture and Science and Municipality of Utrecht"
   onpages:
+    noresultsfound: "No results found"  
+    moreresultsofrequest: "More results for &ldquo;%{request}&rdquo;"  
+    resultsfor: "Results for &ldquo;%{s}&rdquo;"  
     backtocommercial: "Back to Commercial"  
     backtoparticulier: "Back to Private"  
     backtosupportus: "Back to Support us"  
@@ -55,6 +58,19 @@ en:
     backkl: "Back to Watch & listen"
     related: "Related"
     listenmore1: "More watch & listen"
+  mymodels:
+    concert: 
+      one: "%{count} concert"
+      many: "%{count} concerts"
+      other: "%{count} concerts"
+    pageet: 
+      one: "%{count} education & talent"
+      many: "%{count} education & talent"
+      other: "%{count} education & talent"
+    private: 
+      one: "%{count} private"
+      many: "%{count} private"
+      other: "%{count} private"
   activerecord:
     errors:
       messages:

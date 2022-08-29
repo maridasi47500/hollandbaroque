@@ -12,7 +12,7 @@ end
 
 end
 def switch_locale(&action)
-  locale = params[:locale] || I18n.default_locale
+  locale = !["",nil].any?(params[:locale]) ? params[:locale] : I18n.default_locale
   @currentlocale=locale.to_s == "en" ? "en" : nil
   @opposite=locale.to_s == "nl" ? "en" : nil
   

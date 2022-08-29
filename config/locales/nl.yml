@@ -26,6 +26,9 @@ nl:
     presskit: "Perskit"    
     msgfooter: "Onze activiteiten worden mede mogelijk gemaakt door een bijdrage van het Ministerie van Onderwijs, Cultuur en Wetenschap en Gemeente Utrecht"
   onpages:
+    noresultsfound: "Geen resultaten gevonden."  
+    moreresultsofrequest: "Meer resultaten voor &ldquo;%{request}&rdquo;"  
+    resultsfor: "Gezocht op &ldquo;%{s}&rdquo;"  
     backtocommercial: "Terug naar Zakelijk"  
     backtoparticulier: "Terug naar Particulier"  
     backtosupportus: "Terug naar Support us"  
@@ -54,6 +57,19 @@ nl:
     backkl: "Terug naar Kijk & Luister"
     related: "Gerelateerd"
     listenmore1: "Meer kijk & luister"
+  mymodels:
+    concert: 
+      one: concert
+      many: "%{count} Concerten"
+      other: "%{count} Concerten"
+    pageet: 
+      one: "%{count} educatie & talent"
+      many: "%{count} educatie & talent"
+      other: "%{count} educatie & talent"
+    private: 
+      one: "%{count} particulier"
+      many: "%{count} particulier"
+      other: "%{count} particulier"
   activerecord:
     errors:
       messages:

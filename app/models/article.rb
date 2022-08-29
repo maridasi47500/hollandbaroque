@@ -16,6 +16,23 @@ has_many :texts
 has_many :relatedposts
 has_many :otherarticles, through: :relatedposts, source: :otherarticle
 has_many :files, class_name: "Myfile"
+def self.summaryres(s)
+t="%#{s.downcase.gsub(' ','%')}%"
+joins(:contents).group("articles.type").having("lower(articles.title_en) like ? or lower(articles.title_nl) like ? or lower(articles.subtitle_en) like ? or lower(articles.subtitle_nl) like ? or lower(contents.text_en) like ? or lower(contents.text_nl) like ? and articles.type is not null and articles.type != ''",t,t,t,t,t,t).count("distinct(articles.id)")
+
+end
+def self.search(s,page)
+o=page.to_i == 0 ? 0 : (page.to_i - 1)
+xx=o*50
+limit(50).offset(o)
+end
+def self.search1(s)
+t="%#{s.downcase.gsub(' ','%')}%"
+joins(:contents).group("articles.id").having("lower(articles.title_en) like ? or lower(articles.title_nl) like ? or lower(articles.subtitle_en) like ? or lower(articles.subtitle_nl) like ? or lower(contents.text_en) like ? or lower(contents.text_nl) like ? and articles.type is not null and articles.type != ''",t,t,t,t,t,t)
+end
+def mycontrollername
+model_name.singular.gsub("pageet","etpage").gsub('concert',"concerts").gsub('private',"/joinus/private")
+end
 def self.findbyurl(x)
 case I18n.locale.to_s
 when "en"

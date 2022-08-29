@@ -2,8 +2,12 @@ Rails.application.routes.draw do
 post "/engine", to: "joinus#engine"
 get "buybutton", to: "shop#buybutton"
 scope ':locale', locale: /en/ do
-get "", to: "site#index"
 
+get "/", to: "site#search",
+    constraints: lambda { |request| !["",nil].any?(request.params[:s]) }
+get "page/:page/", to: "site#search",
+    constraints: lambda { |request| !["",nil].any?(request.params[:s]) }, as: :searchpage
+get "", to: "site#index"
   get 'friend', to: 'joinus#vriend'
   get 'donate', to: 'joinus#donatie'
   get 'join-us', to: 'joinus#index', as: :joinus_en
@@ -33,7 +37,7 @@ get "education-talent/:title", to: "etpage#show"
 
 get "education-talent", to: "etpage#index"
   get 'about-us/concertarchief', to: 'overons#concertarchief'
-  get 'about-us/partners', to: 'overons#partners'
+  get 'about-us/our-partners', to: 'overons#partners'
 
 get ":title", to: "overons#musicians",
     constraints: lambda { |request| Aboutus.find_by_url_en(request.params[:title]).musicians.length > 0 rescue nil}
@@ -55,6 +59,11 @@ post "graphql", to: "shop#graphql"
 
 end
 scope '(:locale)', locale: /nl|/ do
+get "", to: "site#search",
+    constraints: lambda { |request| !["",nil].any?(request.params[:s]) }
+get "/page/:page", to: "site#search",
+    constraints: lambda { |request| !["",nil].any?(request.params[:s]) }, as: :searchpage_en
+get "", to: "site#index"
   get 'vriend', to: 'joinus#vriend'
   get 'donatie', to: 'joinus#donatie'
   get 'doe-mee', to: 'joinus#index', as: :joinus_nl

@@ -136,13 +136,13 @@ var cnArgs = {"ajaxUrl":"https:\/\/www.hollandbaroque.com\/wp-admin\/admin-ajax.
 
 		<ul id="menu-talenmenu" class="nav language"><li id="menu-item-wpml-ls-59-en" class="menu-item wpml-ls-slot-59 wpml-ls-item wpml-ls-item-en wpml-ls-menu-item wpml-ls-first-item wpml-ls-last-item menu-item-type-wpml_ls_menu_item menu-item-object-wpml_ls_menu_item menu-item-wpml-ls-59-en">
 
-<%if params[:title] and !(url_for(controller: params[:controller], action: params[:action],title: @othertitle, locale: @opposite) rescue nil)%>
+<%if params[:title] and !(url_for(controller: params[:controller], action: params[:action],title: @othertitle, locale: @opposite,s: params[:s],page: params[:page]) rescue nil)%>
 
 <%elsif I18n.locale== :en%>
-<%=link_to "<span class=\"wpml-ls-native\" lang=\"nl\">Netherlands</span>".html_safe, url_for(controller: params[:controller], action: params[:action], locale: nil,title: @othertitle,only_path: true), {title: "Netherlands"}%>
+<%=link_to "<span class=\"wpml-ls-native\" lang=\"nl\">Netherlands</span>".html_safe, url_for(controller: params[:controller], action: params[:action], locale: nil,title: @othertitle,only_path: true,s: params[:s],page: params[:page]), {title: "Netherlands"}%>
 
 <%elsif I18n.locale == :nl%>
-<%=link_to "<span class=\"wpml-ls-native\" lang=\"en\">English</span>".html_safe, url_for(controller: params[:controller], action: params[:action], locale: :en,title: @othertitle, only_path: true), {title: "English"}%>
+<%=link_to "<span class=\"wpml-ls-native\" lang=\"en\">English</span>".html_safe, url_for(controller: params[:controller], action: params[:action], locale: :en,title: @othertitle, only_path: true,s: params[:s],page: params[:page]), {title: "English"}%>
 <%end%>
 
 
@@ -181,15 +181,15 @@ end%></li>
 </nav><div id="NewsletterOverlay" class="newsletter-overlay off-screen" onclick="window.closeOffscreenNewsletter()"></div>
 <nav id="Newsletter" class="newsletter off-screen">
     <button class="close-button" onclick="window.closeOffscreenNewsletter()"></button>
-            <iframe src="/application.html_files/saved_resource.html" height="100%" width="100%" title="Inschrijfformulier nieuwsbrief"></iframe>
+            <iframe src="/application.html_files/saved_resource_<%=I18n.locale%>.html" height="100%" width="100%" title="Inschrijfformulier nieuwsbrief"></iframe>
     </nav><div id="DonationOverlay" class="donation-overlay off-screen" onclick="window.closeOffscreenDonation()"></div>
 <nav id="Donation" class="donation off-screen">
     <button class="close-button" onclick="window.closeOffscreenDonation()"></button>
-            <iframe src="/application.html_files/donatie.html" height="100%" width="100%" title="Inschrijfformulier nieuwsbrief"></iframe>
+            <iframe src="/application.html_files/donatie_<%=I18n.locale%>.html" height="100%" width="100%" title="Inschrijfformulier nieuwsbrief"></iframe>
     </nav><div id="FriendOverlay" class="friend-overlay off-screen" onclick="window.closeOffscreenFriend()"></div>
 <nav id="Friend" class="friend off-screen">
     <button class="close-button" onclick="window.closeOffscreenFriend()"></button>
-            <iframe src="/application.html_files/vriend.html" height="100%" width="100%" title="Word vriend"></iframe>
+            <iframe src="/application.html_files/vriend_<%=I18n.locale%>.html" height="100%" width="100%" title="Word vriend"></iframe>
     </nav>
 
 <%=yield%>

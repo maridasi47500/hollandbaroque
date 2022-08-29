@@ -1,0 +1,47 @@
+
+<div class="single-page-content content-noimage">
+
+  <div class="container">
+    <div class="row">
+      <div class="col-12 col-lg-10 offset-lg-1">
+        <div class="search-wrapper">
+	<h1><%=t('onpages.resultsfor', s: params[:s]).html_safe%></h1>
+	<div class="concert-cards">
+		<div class="row">
+<%@res.each do |name,nb|%>
+<h2 class="search-header col-12"><%=t("mymodels.#{name.underscore}", count: nb)%> </h2>
+	<%end%>	
+	<%=render collection: @posts, as: :post, partial: "site/article"%>							
+				</div>
+	</div>
+    <h2 class="search-header"><%=t("onpages.moreresultsofrequest", request: params[:s]).html_safe%></h2>
+
+<%if @posts.length < 51%>
+				
+<div class="result">
+				<div class="search-post-excerpt">
+				<%=t("onpages.noresultsfound")%>				</div>
+			</div>
+	</div>	
+<%else%>
+<div class="row">
+<%=link_to_unless_current(1, root_path(s: params[:s]), {class: "page-numbers"}) do
+("<span aria-current=\"page\" class=\"page-numbers current\">1</span>").html_safe
+end%>
+				<div class="col-12 search-pagination">
+<%(2..@page[:nb]).to_a.each do |p| %>
+<%=link_to_unless_current(p, searchpage_path(page: p,s: params[:s]), {class: "page-numbers"}) do
+("<span aria-current=\"page\" class=\"page-numbers current\">1</span>").html_safe
+end%>
+<%end%>						
+
+<%if @page[:nb] > 1 && (@page[:current]+1) < @page[:nb]%>
+<a class="next page-numbers" href="https://www.hollandbaroque.com/page/2/?s=muziek">Volgende &raquo;</a>				</div>
+<%end%>
+<%end%>
+		</div>
+
+<%=render "newsletter"%>
+    </div>
+  </div>
+</div>
