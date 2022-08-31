@@ -14,6 +14,70 @@ has_many :quotes
 has_many :youtubes
 has_many :texts
 has_many :relatedposts
+def self.notconcerts
+where.not(type: "Concert")
+end
+def viewname
+case self.model_name.singular
+when "concert"
+"concerts/concert"
+
+
+when "news"
+"site/resultpagenews"
+else
+"site/resultpage"
+#when "aboutus"
+#"overons/pagecard"
+#    when "apply"
+#"etpage/etpage"
+#when "commercial"
+#"joinus/commercial"
+
+#when "joinus"
+#"joinus/joinus"
+#when "postkl"
+#"listen/post"
+
+#when "pageet"
+#"etpage/etpage"
+#when "private"
+#"joinus/private"
+end
+end
+def modelname
+case self.model_name.singular
+when "concert"
+"concert"
+when "news"
+"post"
+else
+"post"
+#when "aboutus"
+#"post"
+#    when "apply"
+#"post"
+#when "commercial"
+#"post"
+
+#when "joinus"
+#"post"
+#when "postkl"
+#"post"
+
+#when "pageet"
+#"post"
+#when "private"
+#"post"
+end
+end
+def self.allmyconcerts
+joins('left join playtimes on playtimes.concert_id = articles.id').left_joins(:youtubes).joins("left join locations on locations.id = playtimes.location_id").select("articles.*, json_group_array(distinct locations.place) as listlocations, json_group_array(strftime('%m',date(playtimes.date))) as listmonths,count(distinct playtimes.location_id) as nblocations,count(lower(youtubes.title_en) like '%livestream%' or lower(youtubes.title_nl) like '%livestream%') as nblivestreams").group('articles.id')
+end
+def self.concerts
+where(type: "Concert").allmyconcerts
+
+end
 has_many :otherarticles, through: :relatedposts, source: :otherarticle
 has_many :files, class_name: "Myfile"
 def self.summaryres(s)
@@ -31,7 +95,7 @@ t="%#{s.downcase.gsub(' ','%')}%"
 joins(:contents).group("articles.id").having("lower(articles.title_en) like ? or lower(articles.title_nl) like ? or lower(articles.subtitle_en) like ? or lower(articles.subtitle_nl) like ? or lower(contents.text_en) like ? or lower(contents.text_nl) like ? and articles.type is not null and articles.type != ''",t,t,t,t,t,t)
 end
 def mycontrollername
-model_name.singular.gsub("pageet","etpage").gsub('concert',"concerts").gsub('private',"/joinus/private")
+model_name.singular.gsub("postkl","listen").gsub("pageet","etpage").gsub('concert',"concerts").gsub('private',"/joinus/private")
 end
 def self.findbyurl(x)
 case I18n.locale.to_s

@@ -1,0 +1,13 @@
+<div class="result post has-image">
+<a href="<%=url_for(controller: "news",action:"show", title: post.url, locale: @currentlocale)%>" class="result-image-block">
+        <img width="1200" height="803" src="<%=post.image%>" class="attachment-medium size-medium wp-post-image" alt="" srcset="" sizes="(max-width: 1200px) 100vw, 1200px">							</a>
+<div class="result-inner-block">
+        <h3 class="search-post-title">
+                <a href="<%=url_for(controller: "news",action:"show", title: post.url, locale: @currentlocale)%>"><%=post.title%></a>
+        </h3>
+        <div class="search-post-excerpt">
+                <p><%=post.subtitle%></p>
+        </div>
+        <a href="<%=url_for(controller: "news",action:"show", title: post.url, locale: @currentlocale)%>" class="more-link"><%=t("onpages.readmore")%></a>
+</div>
+</div>

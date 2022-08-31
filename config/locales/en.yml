@@ -27,6 +27,14 @@ en:
     presskit: "Press kit" 
     msgfooter: "Our activities are made possible in part by a contribution from the Ministry of Education, Culture and Science and Municipality of Utrecht"
   onpages:
+    compulsory: "* obligatory field"  
+    other: "Other"  
+    soulmate: "Soul mate"  
+    bestfriend: "Best friend"  
+    friend: "Friend"
+    yes1: "Yes, I want to support Holland Baroque every year."
+    sum: "Choose an amount between €50 and €250 to become a friend.<br> Choose an amount between €250 and €1000 to become a soul mate.<br> Choose an amount from €1000 to become a soul mate. "
+    errorform: "The form has not been completed correctly"
     noresultsfound: "No results found"  
     moreresultsofrequest: "More results for &ldquo;%{request}&rdquo;"  
     resultsfor: "Results for &ldquo;%{s}&rdquo;"  
@@ -67,13 +75,93 @@ en:
       one: "%{count} education & talent"
       many: "%{count} education & talent"
       other: "%{count} education & talent"
+    postkl: 
+      one: "%{count} watch & listen"
+      many: "%{count} watch & listen"
+      other: "%{count} watch & listen"
+    commercial: 
+      one: "%{count} commercial"
+      many: "%{count} commercial"
+      other: "%{count} commercial"
     private: 
       one: "%{count} private"
       many: "%{count} private"
       other: "%{count} private"
   activerecord:
+    attributes: 
+      donation:
+        amount: "Amount choice"
+        namely: "Namely"
+        firstname: "First name"
+        email: "E-mail address"
+        middlename: "Middle name"
+        lastname: "Last name"
+        newsletter: "Yes, I would like to receive the digital newsletter."
+        brochures: "Yes, I would also like to receive seasonal brochures, postcards, etc."
+        street: "Street"
+        housenumber: "House number"
+        postcode: "Postcode"
+        place: "Place"
+        privacy: "I hereby authorize Holland Baroque to debit the entered amount."
+        telephone: "Telephone"
+      article:
+        title_en: Title 
+      friendship:
+        iban: "IBAN"  
+        typefriendship: "Type friendship"
+        amount: "Amount"
+        authorize: "I hereby authorize Holland Baroque to debit the entered amount."
+        middlename: "Middle name"
+        firstname: "First name"
+        lastname: "Last name"
+        street: "Street"
+        housenumber: "House number"
+        postcode: "Postcode"
+        place: "Place"
+        land: "Country"
+        email: "E-mail"
+        telephone: "Telephone"
+        newsletter: "Yes, I would like to receive the digital newsletter every month."
+        send: "Send"
     errors:
+      models: 
+        friendship: 
+          attributes: 
+            privacy: 
+              blank: "I agree with <a href=\"https://hollandbaroque.nl/privacy/\" target=\"blank\">the privacy policy.</a> is empty"            
+            amount: 
+              blank: "Amount is empty."
+            iban:
+              blank: "IBAN is empty."  
+            typefriendship:
+              blank: "Type friendship is empty."
+            amount:
+              blank: "Amount is empty"
+            authorize:
+              blank: "I hereby authorize Holland Baroque to debit the entered amount. is empty"
+            firstname:
+              blank: "First name is empty"
+            lastname:
+              blank: "Last name is empty"
+            street:
+              blank: "Street is empty"
+            housenumber:
+              blank: "House number is empty"
+            postcode:
+              blank: "Postcode is empty"
+            place:
+              blank: "Place is empty"
+            land:
+              blank: "Country is empty"
+            email:
+              blank: "E-mail is empty"
+            telephone:
+              blank: "Telephone is empty"
+            newsletter:
+              blank: "Yes, I would like to receive the digital newsletter every month. is empty"
       messages:
+        empty: "is empty"  
+        blank: "is empty"  
         record_invalid: 'Validation failed: %{errors}'
         restrict_dependent_destroy:
           has_one: Cannot delete record because a dependent %{record} exists

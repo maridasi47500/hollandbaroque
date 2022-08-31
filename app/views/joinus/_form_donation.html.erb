@@ -1,0 +1,801 @@
+<%=form_with model: donation, scope:"", url: "/engine?locale=#{I18n.locale}", html: { id:"cx_1", class: "cx_form-P7 cx_form", name: "main", "data-urlifmodified"=>"/engine?service=recordmanager:form:P7//1487&amp;cmd=asksave" } do |form|%>
+			<input name="form-id" type="hidden" value="34">
+		<input name="csrf-key" type="hidden" value="5272144690143447860">
+		<input name="submit-number" type="hidden" value="0">
+		<!-- XText empty is not visible at this time, because - - no explanation - - -->
+
+
+
+<%if donation.errors.full_messages.length > 0%>
+<div class="alert alert-danger" data-explanationurl="">
+		<%=t('onpages.errorform')%><ul>
+<%donation.errors.full_messages.each do |m|%>
+<li><%=m%></li>
+<%end%>
+</ul>
+	</div>
+<%end%>
+
+
+
+
+
+
+
+
+
+	<div id="cx_2" class="row cx_paragraph cx_grid-row cx_paragraph-D18 cx_paragraph-wrapper cx_paragraph-D18-wrapper">		
+		<div class="cx_grid-col">
+						 			
+					
+
+
+
+
+
+
+<div class="cx_fieldlines ">
+	<input type="hidden" name="fieldgroup:34" value="ok">
+			
+
+
+
+
+
+		
+
+ 
+
+
+
+
+
+
+
+
+		
+
+ 
+
+
+<div id="cx_marker_line_cx_marker_value_form-P69" class="row cx_fieldline form-group cx_grid-row cx_form-group-sm">
+				
+						
+		
+		
+		
+			
+		
+				
+				
+								
+						<div class="col-md-3 cx_grid-col control-label cx_control-label-left text-md-right col-form-label col-form-label-sm">
+									<%=form.label(:amount, class: "cx_label", id: "cx_label-form:P69", for: "form:P69")%>
+						
+					
+									
+			</div>
+			
+				<div class="col-md-9 cx_grid-col cx_fieldline-content"> 
+									
+						
+																				
+
+<div id="cx_marker_value_form-P69" class="cx_widget cx_required cx_widget-form:P69 cx_persistantContent" data-btn-size="0" data-urlonchange="/engine?modified-field=form:P69&amp;xform=34&amp;x-key=34&amp;xajax-source=fieldgroup">
+	 	
+	
+			
+	
+
+
+<%=form.select :amount, ([1500,2500,5000].map{|h|["€ #{h},-", h]}+[t("onpages.other"),0]), {}, {id: "form:P69", class: "form-control-sm form-control cx_select cx_autosubmit"}%>
+			
+ 
+	
+		 
+		</div>
+																	
+	</div>
+		
+	
+</div>
+				
+
+
+
+
+
+		
+
+ 
+
+
+<div id="cx_marker_line_cx_marker_value_form-P70" class="row cx_fieldline form-group cx_grid-row cx_form-group-sm">
+				
+						
+		
+		
+		
+			
+		
+				
+				
+								
+						<div class="col-md-3 cx_grid-col control-label cx_control-label-left text-md-right col-form-label col-form-label-sm">
+									<%=form.label(:namely, class: "cx_label", id: "cx_label-form:P70", for: "form:P70")%>
+						 
+									
+			</div>
+			
+				<div class="col-md-9 cx_grid-col cx_fieldline-content"> 
+									
+						
+																				
+
+<div id="cx_marker_value_form-P70" class="cx_widget cx_required cx_widget-form:P70 cx_persistantContent" data-btn-size="0" data-urlonchange="/engine?modified-field=form:P70&amp;xform=34&amp;x-key=34&amp;xajax-source=fieldgroup">
+	 	
+	
+			
+	
+
+
+
+<%=form.text_field :namely, id: "form:P70", class: "form-control-sm form-control cx_autosubmit", size: "10"%> 
+	
+		 
+		</div>
+																	
+	</div>
+		
+	
+</div>
+	
+			
+
+
+
+
+
+		
+
+ 
+
+
+<div id="cx_marker_line_cx_marker_value_form-P57" class="row cx_fieldline form-group cx_grid-row cx_form-group-sm">
+				
+						
+		
+		
+		
+			
+		
+				
+			
+								
+						<div class="col-md-3 cx_grid-col control-label cx_control-label-left text-md-right col-form-label col-form-label-sm">
+									<%=form.label(:firstname, class: "cx_label", id: "cx_label-form:P57", for: "form:P57")%>
+						
+									
+			</div>
+			
+				<div class="col-md-9 cx_grid-col cx_fieldline-content"> 
+									
+						
+																				
+
+<div id="cx_marker_value_form-P57" class="cx_widget cx_widget-form:P57 cx_persistantContent" data-btn-size="0">
+	 	
+	
+			
+	
+
+
+
+<%=form.text_field :firstname, id: "form:P57", class: "form-control-sm form-control"%> 
+	
+		 
+		</div>
+																	
+	</div>
+		
+	
+</div>
+			
+
+
+
+
+
+		
+
+ 
+
+
+<div id="cx_marker_line_cx_marker_value_form-P58" class="row cx_fieldline form-group cx_grid-row cx_form-group-sm">
+				
+						
+		
+		
+		
+			
+		
+				
+			
+								
+						<div class="col-md-3 cx_grid-col control-label cx_control-label-left text-md-right col-form-label col-form-label-sm">
+									<%=form.label :middlename, class: "cx_label", id: "cx_label-form:P58", for: "form:P58")%>
+						
+									
+			</div>
+			
+				<div class="col-md-9 cx_grid-col cx_fieldline-content"> 
+									
+						
+																				
+
+<div id="cx_marker_value_form-P58" class="cx_widget cx_widget-form:P58 cx_persistantContent" data-btn-size="0">
+	 	
+	
+			
+	
+
+
+
+<%=form.text_field :middlename, id: "form:P58", class: "form-control-sm form-control" %> 
+	
+		 
+		</div>
+																	
+	</div>
+		
+	
+</div>
+			
+
+
+
+
+
+		
+
+ 
+
+
+<div id="cx_marker_line_cx_marker_value_form-P59" class="row cx_fieldline form-group cx_grid-row cx_form-group-sm">
+				
+						
+		
+		
+		
+			
+		
+				
+			
+								
+						<div class="col-md-3 cx_grid-col control-label cx_control-label-left text-md-right col-form-label col-form-label-sm">
+									<%=form.label(:lastname, class: "cx_label", id: "cx_label-form:P59", for: "form:P59")%>
+						
+									
+			</div>
+			
+				<div class="col-md-9 cx_grid-col cx_fieldline-content"> 
+									
+						
+																				
+
+<div id="cx_marker_value_form-P59" class="cx_widget cx_widget-form:P59 cx_persistantContent" data-btn-size="0">
+	 	
+	
+			
+	
+
+
+
+<%=form.text_field :lastname, id: "form:P59", class: "form-control-sm form-control" %>
+	
+		 
+		</div>
+																	
+	</div>
+		
+	
+</div>
+			
+
+
+
+
+
+		
+
+ 
+
+
+<div id="cx_marker_line_cx_marker_value_form-P60" class="row cx_fieldline form-group cx_grid-row cx_form-group-sm">
+				
+						
+		
+		
+		
+			
+		
+				
+			
+								
+						<div class="col-md-3 cx_grid-col control-label cx_control-label-left text-md-right col-form-label col-form-label-sm">
+									<%=form.label(:email, class: "cx_label", id: "cx_label-form:P60", for: "form:P60")%>
+						
+									
+			</div>
+			
+				<div class="col-md-9 cx_grid-col cx_fieldline-content"> 
+									
+						
+																				
+
+<div id="cx_marker_value_form-P60" class="cx_widget cx_widget-form:P60 cx_persistantContent" data-btn-size="0">
+	 	
+	
+			
+	
+
+
+
+<%=form.email_field :email, id: "form:P60", class: "form-control-sm form-control" %>
+	
+		 
+		</div>
+																	
+	</div>
+		
+	
+</div>
+			
+
+
+
+
+
+		
+
+ 
+
+
+<div id="cx_marker_line_cx_marker_value_form-P61" class="row cx_fieldline form-group cx_grid-row cx_form-group-sm">
+				
+						
+		
+		
+		
+			
+		
+				
+			
+								
+						<div class="col-md-3 cx_grid-col control-label cx_control-label-left text-md-right col-form-label col-form-label-sm">
+									
+			</div>
+			
+				<div class="col-md-9 cx_grid-col cx_fieldline-content"> 
+									
+						
+																				
+
+<div id="cx_marker_value_form-P61" class="cx_widget cx_widget-form:P61 cx_persistantContent" data-btn-size="0" data-urlonchange="/engine?modified-field=form:P61&amp;xform=34&amp;x-key=34&amp;xajax-source=fieldgroup">
+	 	
+	
+			
+	<div class="form-control-sm form-control-plaintext cx_form-control-plaintext cx_checkbox">
+				<%=form.check_box(:newsletter, { id: "form:P61", class:"cx_autosubmit"}, "true", "false"%>
+	<label for="form:P61" class="cx_custom-checkbox"></label>
+			<%=form.label(:newsletter, for: "form:P61", class: "control-label cx_label-inline form-check-label")%>
+			
+		
+	</div> 
+	
+		 
+		</div>
+																	
+	</div>
+		
+	
+</div>
+			
+
+
+
+
+
+		
+
+ 
+
+
+
+
+
+
+
+
+		
+
+ 
+
+
+<div id="cx_marker_line_cx_marker_value_form-P62" class="row cx_fieldline form-group cx_grid-row cx_form-group-sm">
+				
+						
+		
+		
+		
+			
+		
+				
+			
+								
+						<div class="col-md-3 cx_grid-col control-label cx_control-label-left text-md-right col-form-label col-form-label-sm">
+									
+			</div>
+			
+				<div class="col-md-9 cx_grid-col cx_fieldline-content"> 
+									
+						
+																				
+
+<div id="cx_marker_value_form-P62" class="cx_widget cx_widget-form:P62 cx_persistantContent" data-btn-size="0" data-urlonchange="/engine?modified-field=form:P62&amp;xform=34&amp;x-key=34&amp;xajax-source=fieldgroup">
+	 	
+	
+			
+	<div class="form-control-sm form-control-plaintext cx_form-control-plaintext cx_checkbox">
+				<%=form.check_box :brochures, id: "form:P62", class: "cx_autosubmit"}, "true", "false"%>
+			<%=form.label(:brochures, for: "form:P62", class: "control-label cx_label-inline form-check-label")%>
+			
+		
+	</div> 
+	
+		 
+		</div>
+																	
+	</div>
+		
+	
+</div>
+				
+
+
+
+
+
+		
+
+ 
+
+
+<div id="cx_marker_line_cx_marker_value_form-P63" class="row cx_fieldline form-group cx_grid-row cx_form-group-sm">
+				
+						
+		
+		
+		
+			
+		
+				
+				
+								
+						<div class="col-md-3 cx_grid-col control-label cx_control-label-left text-md-right col-form-label col-form-label-sm">
+									<%=form.label(:street, class:"cx_label", id: "cx_label-form:P63", for:"form:P63")%>
+						
+									
+			</div>
+			
+				<div class="col-md-9 cx_grid-col cx_fieldline-content"> 
+									
+						
+																				
+
+<div id="cx_marker_value_form-P63" class="cx_widget cx_required cx_widget-form:P63 cx_persistantContent" data-btn-size="0" data-urlonchange="/engine?modified-field=form:P63&amp;xform=34&amp;x-key=34&amp;xajax-source=fieldgroup">
+	 	
+	
+			
+	
+
+
+
+<%=form.text_field :street, id: "form:P63", class: "form-control-sm form-control cx_autosubmit" %>
+	
+		 
+		</div>
+																	
+	</div>
+		
+	
+</div>
+	
+				
+
+
+
+
+
+		
+
+ 
+
+
+<div id="cx_marker_line_cx_marker_value_form-P64" class="row cx_fieldline form-group cx_grid-row cx_form-group-sm">
+				
+						
+		
+		
+		
+			
+		
+				
+				
+								
+						<div class="col-md-3 cx_grid-col control-label cx_control-label-left text-md-right col-form-label col-form-label-sm">
+									<%=form.label(:housenumber, class:"cx_label", id:"cx_label-form:P64", for:"form:P64")%>
+						
+									
+			</div>
+			
+				<div class="col-md-9 cx_grid-col cx_fieldline-content"> 
+									
+						
+																				
+
+<div id="cx_marker_value_form-P64" class="cx_widget cx_required cx_widget-form:P64 cx_persistantContent" data-btn-size="0" data-urlonchange="/engine?modified-field=form:P64&amp;xform=34&amp;x-key=34&amp;xajax-source=fieldgroup">
+	 	
+	
+			
+	
+
+
+
+<%=form.text_field :housenumber, id: "form:P64", class: "form-control-sm form-control cx_autosubmit"%> 
+	
+		 
+		</div>
+																	
+	</div>
+		
+	
+</div>
+	
+				
+
+
+
+
+
+		
+
+ 
+
+
+<div id="cx_marker_line_cx_marker_value_form-P65" class="row cx_fieldline form-group cx_grid-row cx_form-group-sm">
+				
+						
+		
+		
+		
+			
+		
+				
+				
+								
+						<div class="col-md-3 cx_grid-col control-label cx_control-label-left text-md-right col-form-label col-form-label-sm">
+									<%=form.label(:postcode, class:"cx_label", id:"cx_label-form:P65", for:"form:P65")%>
+						
+									
+			</div>
+			
+				<div class="col-md-9 cx_grid-col cx_fieldline-content"> 
+									
+						
+																				
+
+<div id="cx_marker_value_form-P65" class="cx_widget cx_required cx_widget-form:P65 cx_persistantContent" data-btn-size="0" data-urlonchange="/engine?modified-field=form:P65&amp;xform=34&amp;x-key=34&amp;xajax-source=fieldgroup">
+	 	
+	
+			
+	
+
+
+
+<%=form.text_field :housenumber, id: "form:P65", class: "form-control-sm form-control cx_autosubmit"%> 
+	
+		 
+		</div>
+																	
+	</div>
+		
+	
+</div>
+	
+				
+
+
+
+
+
+		
+
+ 
+
+
+<div id="cx_marker_line_cx_marker_value_form-P66" class="row cx_fieldline form-group cx_grid-row cx_form-group-sm">
+				
+						
+		
+		
+		
+			
+		
+				
+				
+								
+						<div class="col-md-3 cx_grid-col control-label cx_control-label-left text-md-right col-form-label col-form-label-sm">
+									<%=form.label(:place,class:"cx_label", id:"cx_label-form:P66", for:"form:P66")%>
+						
+									
+			</div>
+			
+				<div class="col-md-9 cx_grid-col cx_fieldline-content"> 
+									
+						
+																				
+
+<div id="cx_marker_value_form-P66" class="cx_widget cx_required cx_widget-form:P66 cx_persistantContent" data-btn-size="0" data-urlonchange="/engine?modified-field=form:P66&amp;xform=34&amp;x-key=34&amp;xajax-source=fieldgroup">
+	 	
+	
+			
+	
+
+
+
+<%=form.text_field :place, id:"form:P66", class:"form-control-sm form-control cx_autosubmit"%>
+	
+		 
+		</div>
+																	
+	</div>
+		
+	
+</div>
+	
+					<div id="cx_marker_line_cx_marker_value_form-P73" class="cx_hiddenmarker"></div>
+	
+	
+				
+
+
+
+
+
+		
+
+ 
+
+
+<div id="cx_marker_line_cx_marker_value_form-P67" class="row cx_fieldline form-group cx_grid-row cx_form-group-sm">
+				
+						
+		
+		
+		
+			
+		
+				
+			
+								
+						<div class="col-md-3 cx_grid-col control-label cx_control-label-left text-md-right col-form-label col-form-label-sm">
+									<%=form.label(:telephone, class:"cx_label", id:"cx_label-form:P67", for:"form:P67")%>
+						
+									
+			</div>
+			
+				<div class="col-md-9 cx_grid-col cx_fieldline-content"> 
+									
+						
+																				
+
+<div id="cx_marker_value_form-P67" class="cx_widget cx_widget-form:P67 cx_persistantContent" data-btn-size="0" data-urlonchange="/engine?modified-field=form:P67&amp;xform=34&amp;x-key=34&amp;xajax-source=fieldgroup">
+	 	
+	
+			
+	
+
+
+
+<%=form.text_field :telephone,id: "form:P67", class:"form-control-sm form-control cx_autosubmit" %> 
+	
+		 
+		</div>
+																	
+	</div>
+		
+	
+</div>
+	
+				
+
+
+
+
+
+		
+
+ 
+
+
+<div id="cx_marker_line_cx_marker_value_form-P68" class="row cx_fieldline form-group cx_grid-row cx_form-group-sm">
+				
+						
+		
+		
+		
+			
+		
+				
+				
+								
+						<div class="col-md-3 cx_grid-col control-label cx_control-label-left text-md-right col-form-label col-form-label-sm">
+									
+			</div>
+			
+				<div class="col-md-9 cx_grid-col cx_fieldline-content"> 
+									
+						
+																				
+
+<div id="cx_marker_value_form-P68" class="cx_widget cx_required cx_widget-form:P68 cx_persistantContent" data-btn-size="0" data-urlonchange="/engine?modified-field=form:P68&amp;xform=34&amp;x-key=34&amp;xajax-source=fieldgroup">
+	 	
+	
+			
+	<div class="form-control-sm form-control-plaintext cx_form-control-plaintext cx_checkbox">
+				<%=form.check_box :privacy,{ id:"form:P68", class:"cx_autosubmit"},"true","false"%>
+	<%=form.label(:privacy,for:"form:P68", class:"cx_custom-checkbox")%>
+			<%=form.label(:privacy, for:"form:P68", class:"control-label cx_label-inline form-check-label")%>
+			
+	</div> 
+	
+		 
+		</div>
+																	
+	</div>
+		
+	
+</div>
+	
+		</div>
+	
+
+	<div class="cx_text" data-explanationurl="">
+		<%=t('onpages.compulory')%>
+	</div>
+
+
+ 
+
+		
+
+			 		</div>
+	</div>
+
+	<div id="cx_3" class="cx_btn-toolbar cx_btn-toolbar-sm" role="group" aria-label="button bar">
+						<div class="btn-toolbar">
+							
+
+ 
+
+
+
+<a id="cx_4" role="button" class="btn btn-success cx_btn btn-sm cx_btn-send cx_submit" href="/engine?service=recordmanager:form:P7//1487&amp;cmd=save" aria-label="<%=t("activerecord.attributes.friendship.send")%>" draggable="false" data-changeonmodifiedstate="true">
+							<span class="cx_icon fa" aria-hidden="true" data-btnname="save"></span> 	
+							<span class="cx_btn-label"><%=t("activerecord.attributes.friendship.send")%></span>
+				</a>
+					</div>
+			</div>
+
+<%end%>

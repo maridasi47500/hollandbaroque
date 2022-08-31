@@ -26,6 +26,14 @@ nl:
     presskit: "Perskit"    
     msgfooter: "Onze activiteiten worden mede mogelijk gemaakt door een bijdrage van het Ministerie van Onderwijs, Cultuur en Wetenschap en Gemeente Utrecht"
   onpages:
+    compulsory: "* verplicht veld"  
+    other: "Anders"  
+    soulmate: "Zielsverwant"  
+    bestfriend: "Boezemvriend"  
+    friend: "Vriend"
+    yes1: "Ja, ik wil Holland Baroque jaarlijks steunen."
+    sum: "Kies een bedrag tussen de € 50 en € 250 om vriend te worden.<br> Kies een bedrag tussen de € 250 en € 1000 om boezemvriend te worden.<br> Kies een bedrag vanaf € 1000 om zielsverwant te worden."
+    errorform: "Het formulier is niet goed ingevuld"
     noresultsfound: "Geen resultaten gevonden."  
     moreresultsofrequest: "Meer resultaten voor &ldquo;%{request}&rdquo;"  
     resultsfor: "Gezocht op &ldquo;%{s}&rdquo;"  
@@ -71,8 +79,76 @@ nl:
       many: "%{count} particulier"
       other: "%{count} particulier"
   activerecord:
+    attributes:
+      donation:
+        amount: "Bedrag keuze"
+        namely: "Namelijk"
+        firstname: "Voornaam"
+        lastname: "Achternaam "
+        email: "E-mailadres"
+        middlename: "Tussenvoegsel"
+        newsletter: "Ja, ik ontvang graag de digitale nieuwsbrief."
+        brochures: "Ja, ik ontvang graag ook seizoensbrochures, ansichtkaarten, enz."
+        street: "Straat"
+        housenumber: "Huisnummer"
+        postcode: "Postcode"
+        place: "Plaats"
+        privacy: "Hierbij machtig ik Holland Baroque om het ingevulde bedrag af te schrijven."
+        telephone: "Telefoon"
+      article:
+        title_en: Title 
+      friendship:
+        iban: "IBAN"  
+        typefriendship: "Type vriendschap" 
+        amount: "Bedrag"
+        authorize: "Hierbij machtig ik Holland Baroque om het ingevulde bedrag af te schrijven."
+        middlename: "Tussenvoegsel"
+        firstname: "Voornaam"
+        lastname: "Achternaam "
+        street: "Straat"
+        housenumber: "Huisnummer"
+        postcode: "Postcode"
+        place: "Plaats"
+        land: "Land"
+        email: "E-mail"
+        telephone: "Telefoon"
+        newsletter: "Ja, ik ontvang graag maandelijks de digitale nieuwsbrief."
+        send: "Versturen"
     errors:
+      models: 
+        friendship: 
+          attributes: 
+            privacy: 
+              blank: "Ik ga akkoord met <a href=\"https://hollandbaroque.nl/privacy/\" target=\"blank\">het privacybeleid.</a> is leeg"
+            amount: 
+              blank: "Bedrag keuze is leeg."
+            authorize:
+              blank: "Hierbij machtig ik Holland Baroque om het ingevulde bedrag af te schrijven."
+            middlename:
+              blank: "Tussenvoegsel"
+            firstname:
+              blank: "Voornaam"
+            lastname:
+              blank: "Achternaam "
+            street:
+              blank: "Straat"
+            housenumber:
+              blank: "Huisnummer"
+            postcode:
+              blank: "Postcode"
+            place:
+              blank: "Plaats"
+            land:
+              blank: "Land"
+            email:
+              blank: "E-mail"
+            telephone:
+              blank: "Telefoon"
+            newsletter:
+              blank: "Ja, ik ontvang graag maandelijks de digitale nieuwsbrief."
       messages:
+        empty: "is leeg"  
+        blank: "is leeg"  
         record_invalid: 'Validatie mislukt: %{errors}'
         restrict_dependent_destroy:
           has_one: Kan item niet verwijderen omdat %{record} afhankelijk is

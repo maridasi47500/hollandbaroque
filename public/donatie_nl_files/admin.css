@@ -1,0 +1,269 @@
+/*
+.container {
+    padding-right: 10px;
+    padding-left: 10px;
+}
+.row{
+    margin-right: -10px;
+    margin-left: -10px;
+}
+.col-md-10,
+.col-md-11,
+.col-md-12,
+.col-md-2,
+.col-md-3, 
+.col-md-4, 
+.col-md-5,
+.col-md-6,
+.col-md-7,
+.col-md-8, 
+.col-md-9{
+    padding-right: 10px;
+    padding-left: 10px;
+}
+.form-horizontal .form-group {
+    margin-right: -10px;
+    margin-left: -10px;
+}
+.tab-content {
+    padding: 10px;
+    margin-bottom: 10px;
+}
+
+.tab-content .panel {
+   margin-bottom: 15px;
+}
+.panel-body{
+    padding: 10px;
+}
+.modal-body {
+	padding: 10px;
+}
+*/
+.cx_icon{
+    font-size: 14px;
+}
+/* --- SPLITPANE --- */
+/*
+.cx_splitpane{
+    padding-left: 10px;
+    padding-right: 10px;
+    margin-bottom: 10px;
+}
+.cx_leftpane {
+    margin-left: -10px;
+}
+.cx_rightpane {
+    margin-right: -10px;
+}
+*/
+
+/* --- BTN --- */
+
+/* same as .btn-sm */
+.btn:not(.cx_btn-iconOnly):not(.cx_tree .cx_btn){
+	padding: 5px 10px;
+	/*font-size: 12px; */
+    line-height: 1.5;
+    border-radius: 3px;
+}
+.cx_fieldline_content .btn {
+	padding: 6px;
+    height: 30px;
+}
+/* --- FORM --- */
+.form-group {
+    margin-bottom: 5px;
+}
+/* same as .input-sm || .form-group-sm .form-control */
+.form-control:not(.cx_doubleselectbox-left):not(.cx_doubleselectbox-right){
+    height: 30px;
+    min-height: 30px;	
+    padding: 5px 10px;
+ /*   font-size: 12px; */
+    line-height: 1.5;
+  /*  border-radius: 3px; */
+}
+textarea.form-control:not(.cx_doubleselectbox-left):not(.cx_doubleselectbox-right){
+    height: auto;
+}
+/* same as .form-horizontal .form-group-sm .control-label */
+.form-horizontal .form-group .control-label {
+    padding-top: 0;
+/*    font-size: 12px; */
+    min-height: 30px;
+    line-height: 30px;
+}
+/* same as .input-group-sm */
+.input-group>.form-control, 
+.input-group>.input-group-addon, 
+.input-group>.input-group-btn>.btn {
+    height: 30px;
+    padding: 5px 10px;
+/*    font-size: 12px; */
+    line-height: 1.5;
+    border-radius: 3px;
+}
+.form-horizontal .checkbox, 
+.form-horizontal .checkbox-inline, 
+.form-horizontal .radio, 
+.form-horizontal .radio-inline{
+    padding-top: 0px;
+}
+.form-control-static{
+    min-height: 30px;
+}
+.cx_fieldline_content .cx_widget .input-group-btn:first-of-type,
+.cx_fieldline_content .cx_editableWidget .input-group-btn:first-of-type{
+	margin-left: -6px;
+}
+
+
+/* .table-condensed uses 5px */
+.table>tbody>tr>td, 
+.table>tbody>tr>th, 
+.table>tfoot>tr>td, 
+.table>tfoot>tr>th, 
+.table>thead>tr>td, 
+.table>thead>tr>th {
+    padding: 2px 5px;
+}
+.table > thead > tr > td:first-of-type, 
+.table > thead > tr > th:first-of-type, 
+.table > tbody > tr > td:first-of-type, 
+.table > tbody > tr > th:first-of-type, 
+.table > tfoot > tr > td:first-of-type, 
+.table > tfoot > tr > th:first-of-type{
+    padding-left: 15px;
+}
+
+.cx_td_content{
+    min-height: 30px;
+}
+.cx_td_content .cx_widget, 
+.cx_td_content .cx_editableWidget {
+    min-height: 30px;
+}
+
+.cx_searchbox{
+	line-height: 30px;
+}
+
+
+/********************************/
+/*								*/
+/*		ADMIN ONLY ELEMENTS 	*/
+/*								*/
+/********************************/
+
+
+/* ADMIN MENU ICONS*/
+.cx_menu-goToApplication .cx_icon::before {
+	 content: "\f022";
+}
+.cx_menu-blueprint .cx_icon::before {
+	 content: "\f1b2";
+}
+.cx_menu-database .cx_icon::before {
+	 content: "\f1c0";
+}
+.cx_menu-application .cx_icon:not([class*="fa-"])::before {
+	 content: "\f0ad";
+}
+.cx_menu-monitor .cx_icon::before {
+	 content: "\f21e";
+}
+.cx_menu-session .cx_icon::before {
+	 content: "\f26c";
+}
+
+/* GO TO APPLICTION */
+.navbar .navbar-nav > li > .cx_menu-goToApplication{
+    color: white;
+    background: #50a9f8;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    margin-top: 5px;
+    margin-left: 5px;
+    border-radius: 4px;
+}
+.navbar .navbar-nav > li > .cx_menu-goToApplication:hover{
+	color: white;
+	background: #7bc0fe;
+}
+.navbar .navbar-nav > li > .cx_menu-goToApplication:active,
+.navbar .navbar-nav > li > .cx_menu-goToApplication:focus,  
+.navbar .navbar-nav > li > .cx_menu-goToApplication:active:focus, 
+.navbar .navbar-nav > li > .cx_menu-goToApplication:active:hover{
+	color: white;
+	background: #2e9afa;
+}
+ 
+
+
+
+/* TOOLBAR */
+.cx_menu-admin + .cx_toolbar + * {
+	 margin-top: 110px;
+	/* margin-left: 37px !important; */
+}
+.cx_admin-toolbar .cx_toolbar{
+	display: block;
+	top: 50px;
+	width: 100%;
+	height: 40px;
+	position: fixed;
+	background: #f8f8f8;
+	border-bottom: 1px solid #ddd; 
+    z-index: 1029;
+}
+.cx_admin-toolbar .cx_toolbar ul{
+	margin: 0;
+	padding: 0px;
+	-webkit-padding-start: 0;
+	-webkit-margin-before: 0;
+	-webkit-margin-after: 0;
+}
+.cx_admin-toolbar .cx_toolbar ul li{
+	list-style: none;
+	float: left;
+}
+.cx_admin-toolbar .cx_toolbar ul li:first-of-type{
+	margin-left: 5px;
+}
+.cx_admin-toolbar .cx_toolbar ul li a{
+    display: block;
+    padding: 10px;
+}
+.cx_admin-toolbar #searchform{
+    display: flex;
+}
+.cx_admin-toolbar .cx_toolbar .cx_search{
+	float: right;
+	display:flex;
+    justify-content: center;
+    flex-direction: column;
+	height: 40px;	
+}
+.cx_admin-toolbar .cx_toolbar .cx_search .form-group{
+	margin: 0 4px 0 0;
+	float: left;
+}
+.cx_admin-toolbar .cx_toolbar .cx_search .cx_icon::before {
+	content: "\f002";
+}
+.cx_application_admin .cx_toolbar .cx_search .cx_label{
+	display: none;
+}
+
+.cx_toolbar-Filters,
+.cx_toolbar-IP.restrictions{
+    border-right: 1px solid #dddddd;
+}
+
+/* HACK: TOOLBAR HELEMAAL NIET TONEN OP MOBILE */
+@media (max-width: 768px) {
+	.cx_admin-toolbar .cx_toolbar ul{
+		display: none;
+	}
+}

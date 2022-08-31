@@ -11,24 +11,32 @@
 <%@res.each do |name,nb|%>
 <h2 class="search-header col-12"><%=t("mymodels.#{name.underscore}", count: nb)%> </h2>
 	<%end%>	
-	<%=render collection: @posts, as: :post, partial: "site/article"%>							
-				</div>
-	</div>
+            <%=render collection: @posts.concerts, as: :concert, partial: "concerts/concert"%>
+		
+</div>
+</div>
     <h2 class="search-header"><%=t("onpages.moreresultsofrequest", request: params[:s]).html_safe%></h2>
+<%if @posts.notconcerts.length > 0%>
+<%@posts.notconcerts.each do |post| %>
+	<%=render post.viewname, :"#{post.modelname}" => post%>							
+            <%end%>
+<%else%>
 
-<%if @posts.length < 51%>
+	
+
 				
 <div class="result">
 				<div class="search-post-excerpt">
 				<%=t("onpages.noresultsfound")%>				</div>
 			</div>
 	</div>	
-<%else%>
+<%end%>
+<%if @search.length > 50%>
 <div class="row">
 <%=link_to_unless_current(1, root_path(s: params[:s]), {class: "page-numbers"}) do
 ("<span aria-current=\"page\" class=\"page-numbers current\">1</span>").html_safe
 end%>
-				<div class="col-12 search-pagination">
+<div class="col-12 search-pagination">
 <%(2..@page[:nb]).to_a.each do |p| %>
 <%=link_to_unless_current(p, searchpage_path(page: p,s: params[:s]), {class: "page-numbers"}) do
 ("<span aria-current=\"page\" class=\"page-numbers current\">1</span>").html_safe

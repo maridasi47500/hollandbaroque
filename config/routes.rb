@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
 post "/engine", to: "joinus#engine"
+get "/engine", to: "joinus#engine"
 get "buybutton", to: "shop#buybutton"
 scope ':locale', locale: /en/ do
 
@@ -56,6 +57,9 @@ get "contact", to: "site#contact"
 post "graphql", to: "shop#graphql"
   get 'join-us/:title1/:title', to: 'joinus#otherroute'
   get 'join-us/:title1', to: 'joinus#othershortroute'
+  get 'friend', to: 'joinus#vriend'
+  get 'donate', to: 'joinus#donatie'
+  get 'newsletter', to: 'joinus#nieuwsbrief'
 
 end
 scope '(:locale)', locale: /nl|/ do
@@ -66,6 +70,7 @@ get "/page/:page", to: "site#search",
 get "", to: "site#index"
   get 'vriend', to: 'joinus#vriend'
   get 'donatie', to: 'joinus#donatie'
+  get 'nieuwsbrief', to: 'joinus#nieuwsbrief'
   get 'doe-mee', to: 'joinus#index', as: :joinus_nl
   get 'doe-mee/particulier', to: 'joinus/private#index'
   get 'doe-mee/particulier/:title', to: 'joinus/private#show'
@@ -107,6 +112,7 @@ get ":title", to: "news#show",
 get "nieuws", to: "news#index"
 get "contact", to: "site#contact"
 post "graphql", to: "shop#graphql"
+
   get 'doe-mee/:title1/:title', to: 'joinus#otherroute'
   get 'doe-mee/:title1', to: 'joinus#othershortroute'
 
