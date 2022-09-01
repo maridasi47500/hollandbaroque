@@ -1,9 +1,13 @@
 en:
+    
   hello: "Hello world"
   pages:
     concerts: Concerts
     location: Location
     month: Month
+  success:
+    newsletter: `<p>Thank you for registering.<br>The newsletter is sent monthly during the concert season.<br>You can always unsubscribe.</p><p><strong>Become a friend</strong><br>Thanks to your support, we can enter into unique collaborations, rent spaces and conduct musical research.<br>Participate and connect with Holland Baroque!</p><p><a href="https://hollandbaroque.nl/">More information</a></p>`
+    friend: `<div><p>We have received your application, thank you very much for your support. The entered amount will be collected within a few days. </div></p>`    
   nblocation: 
     one: "1 Location"    
     other: "%{count} Locations"  

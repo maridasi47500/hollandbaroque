@@ -1,4 +1,7 @@
 nl:
+  success:
+    newsletter: `<p>Bedankt voor je aanmelding.<br>De nieuwsbrief wordt tijdens het concertseizoen maandelijks verstuurd.<br>Je kunt je altijd afmelden.</p><p><strong>Word vriend</strong><br>Dankzij uw steun kunnen we unieke samenwerkingen aangaan, ruimtes huren en muzikaal onderzoek doen.<br>Deelnemen en verbinden met Holland Baroque!</p><p><a href="https://hollandbaroque.nl/">Meer informatie</a></p>`    
+    friend: `<div><p>We hebben uw aanvraag ontvangen, hartelijk dank voor uw steun. Het ingevulde bedrag wordt binnen enkele dagen geïncasseerd.</div></p>` 
   pages:
     concerts: Concerten
     location: Locatie
