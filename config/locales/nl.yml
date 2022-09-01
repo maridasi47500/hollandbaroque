@@ -26,6 +26,14 @@ nl:
     presskit: "Perskit"    
     msgfooter: "Onze activiteiten worden mede mogelijk gemaakt door een bijdrage van het Ministerie van Onderwijs, Cultuur en Wetenschap en Gemeente Utrecht"
   onpages:
+    cdnewsletter: "Meld je aan voor onze nieuwsbrief. Onder de nieuwe inschrijvingen verloten wij elke maand een CD."  
+    newsletter: "Nieuwsbrief"  
+    supportmusicians: "Steun onze musici met een eenmalige donatie!"  
+    donations: "Donaties"  
+    email: "E-mail"  
+    phone: "Telefoonnummer"
+    tryagain: "Zou u zo vriendelijk willen zijn om het opnieuw te proberen?<br>Of neem contact met ons op en wij helpen u verder."  
+    pitypayment: "Wat jammer, de betaling is niet gelukt."  
     compulsory: "* verplicht veld"  
     other: "Anders"  
     soulmate: "Zielsverwant"  
@@ -97,6 +105,20 @@ nl:
         telephone: "Telefoon"
       article:
         title_en: Title 
+      newsletter:
+        firstname: "Voornaam"
+        prefix: "Voorvoegsel"
+        lastname: "Achternaam "
+        email: "E-mailadres"
+        newsletter: "Ja, ik ontvang graag de digitale nieuwsbrief."
+        brochures: "Ja, ik ontvang graag ook seizoensbrochures, ansichtkaarten, enz."
+        street: "Straat"
+        housenumber: "Huisnummer"
+        postcode: "Postcode"
+        city: "Stad"
+        country: "Land"
+        phone: "Telefoon"
+        privacy: "Hierbij machtig ik Holland Baroque om het ingevulde bedrag af te schrijven."
       friendship:
         iban: "IBAN"  
         typefriendship: "Type vriendschap" 
@@ -115,7 +137,32 @@ nl:
         newsletter: "Ja, ik ontvang graag maandelijks de digitale nieuwsbrief."
         send: "Versturen"
     errors:
-      models: 
+      models:
+        newsletter:
+          attributes:
+            lastname: 
+              blank: "Achternaam is leeg"  
+            firstname: 
+              blank: "Voornaam is leeg"  
+            country: 
+              blank: "Land is leeg"  
+            city: 
+              blank: "Stad is leeg"  
+            postcode: 
+              blank: "Postcode is leeg"  
+            housenumber: 
+              blank: "Huisnummer is leeg"  
+            street: 
+              blank: "Straat is leeg"  
+            email: 
+              blank: "E-mailadres is leeg"  
+        donation:
+          attributes:
+            amount:
+              blank: "Bedrag keuze is leeg"
+            namely:
+              blank: "Bedrag keuze is leeg"
+              invalid: "Bedrag keuze is leeg"
         friendship: 
           attributes: 
             privacy: 
@@ -123,29 +170,29 @@ nl:
             amount: 
               blank: "Bedrag keuze is leeg."
             authorize:
-              blank: "Hierbij machtig ik Holland Baroque om het ingevulde bedrag af te schrijven."
+              blank: "Hierbij machtig ik Holland Baroque om het ingevulde bedrag af te schrijven. is leeg"
             middlename:
-              blank: "Tussenvoegsel"
+              blank: "Tussenvoegsel is leeg"
             firstname:
-              blank: "Voornaam"
+              blank: "Voornaam is leeg"
             lastname:
-              blank: "Achternaam "
+              blank: "Achternaam is leeg"
             street:
-              blank: "Straat"
+              blank: "Straat is leeg"
             housenumber:
-              blank: "Huisnummer"
+              blank: "Huisnummer is leeg"
             postcode:
-              blank: "Postcode"
+              blank: "Postcode is leeg"
             place:
-              blank: "Plaats"
+              blank: "Plaats is leeg"
             land:
-              blank: "Land"
+              blank: "Land is leeg"
             email:
-              blank: "E-mail"
+              blank: "E-mail is leeg"
             telephone:
-              blank: "Telefoon"
+              blank: "Telefoon is leeg"
             newsletter:
-              blank: "Ja, ik ontvang graag maandelijks de digitale nieuwsbrief."
+              blank: "Ja, ik ontvang graag maandelijks de digitale nieuwsbrief. is leeg"
       messages:
         empty: "is leeg"  
         blank: "is leeg"  

@@ -1,0 +1,13 @@
+@media screen and (max-width: 460px) {
+	body {
+		padding-top: 0;
+	}
+	#logo {
+		display: none;
+	}
+}
+@media screen and (max-height: 700px) {
+	#logo {
+		display: none;
+	}
+}

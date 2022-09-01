@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2022_08_30_005133) do
+ActiveRecord::Schema.define(version: 2022_09_01_010104) do
 
   create_table "articles", force: :cascade do |t|
     t.string "title_en"
@@ -37,6 +37,24 @@ ActiveRecord::Schema.define(version: 2022_08_30_005133) do
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.integer "orderid"
+  end
+
+  create_table "donations", force: :cascade do |t|
+    t.string "amount"
+    t.string "namely"
+    t.string "firstname"
+    t.string "email"
+    t.string "middlename"
+    t.string "lastname"
+    t.string "brochures"
+    t.string "street"
+    t.string "housenumber"
+    t.string "postcode"
+    t.string "place"
+    t.string "privacy"
+    t.string "telephone"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
   end
 
   create_table "friendships", force: :cascade do |t|
@@ -138,6 +156,24 @@ ActiveRecord::Schema.define(version: 2022_08_30_005133) do
     t.string "mytype"
     t.string "label"
     t.string "filename"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
+
+  create_table "newsletters", force: :cascade do |t|
+    t.string "firstname"
+    t.string "prefix"
+    t.string "lastname"
+    t.string "email"
+    t.boolean "newsletter"
+    t.boolean "brochures"
+    t.string "street"
+    t.string "housenumber"
+    t.string "postcode"
+    t.string "city"
+    t.string "country"
+    t.string "phone"
+    t.boolean "privacy"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end

@@ -1,0 +1,249 @@
+html {
+	font-size: 100%;
+}
+
+body {
+	background-color: #aa9593;
+	font-size: 18px;
+	font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+	color: #000000;
+}
+
+:focus {
+	outline: 0 !important;
+}
+
+.form-control:focus {
+	box-shadow: none !important;
+}
+
+body .content {
+	padding: 0;
+	font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+}
+
+body .content form {
+	padding: 0;
+}
+
+body .content form .row {
+	padding: 0;
+	margin: 0;
+}
+
+body .content form .row .col-sm-offset-3 {
+	margin-left: 0 !important;
+	width: 100%;
+}
+
+body .content form .row .cx_text_wrapper .cx_text {
+	padding: 0 15px;
+}
+
+body .content form .cx_fieldline {
+	margin-bottom: 15px;
+	text-align: left;
+}
+
+
+body .content form .cx_fieldline a {
+	color: #000000;
+	text-decoration: underline;
+}
+
+body .content form .cx_fieldline a:hover {
+	text-decoration: none;
+}
+
+body .content form .cx_fieldline .form-group .control-label {
+	text-align: left;
+	width: 100%;
+}
+
+body .content form .cx_fieldline .form-group .control-label label {
+	font-weight: normal;
+}
+
+body
+	.content
+	form
+	.cx_fieldline
+	.form-group
+	.control-label
+	label
+	.cx_required_mark:after {
+	content: "*";
+	display: inline-block;
+}
+body .content form .cx_fieldline .form-group .cx_fieldline-content {
+	width: 100%;
+}
+
+body .content form .cx_fieldline .form-group .cx_fieldline-content input {
+	border-radius: 0;
+	appearance: none;
+	border: 0;
+}
+
+body .content form .cx_fieldline .form-group .cx_fieldline-content input {
+	height: 40px;
+	border-radius: 0;
+	appearance: none;
+	border: 0;
+	border-bottom: 2px solid black;
+	background-color: rgba(255, 255, 255, 0.2);
+	transition: background-color 300ms ease-in-out;
+}
+
+body
+	.content
+	form
+	.cx_fieldline
+	.form-group
+	.cx_fieldline-content
+	input[type="checkbox"] {
+	appearance: checkbox;
+	float: left;
+	height: auto;
+	margin: 6px 0 0;
+	border-bottom: 0;
+}
+
+body .content form .cx_fieldline .form-group .control-label {
+	min-height: 0;
+}
+
+body .content form .cx_fieldline .form-group .cx_fieldline-content input:focus {
+	background-color: rgba(255, 255, 255, 0.5);
+}
+
+body
+	.content
+	form
+	.cx_fieldline
+	.form-group
+	.cx_fieldline-content
+	.cx_checkbox {
+	width: 90%;
+}
+
+body
+	.content
+	form
+	.cx_fieldline
+	.form-group
+	.cx_fieldline-content
+	.cx_checkbox
+	label {
+	font-weight: normal;
+	padding-left: 0px;
+}
+
+body
+	.content
+	form
+	.cx_fieldline
+	.form-group
+	.cx_fieldline-content
+	.cx_checkbox
+	.cx_label-inline {
+	width: 90%;
+	line-height: 24px;
+}
+
+body .cx_btn_wrapper .btn {
+	display: inline-block;
+	padding: 10px 27px !important;
+	font-size: 1.25rem;
+	line-height: 1.25rem;
+	color: white;
+	text-decoration: none;
+	background-color: #000000;
+	transition: all 300ms ease-in-out;
+	border: 0;
+	border-radius: 0 !important;
+	appearance: none;
+}
+
+body .cx_btn_wrapper .btn:hover {
+	background-color: #da4042;
+}
+
+body .btn-toolbar .cx_btn_wrapper {
+	padding-left: 15px;
+}
+.cx_title1 {
+	margin-bottom: 50px;
+}
+
+.cx_title1,
+.cx_text {
+	margin-left: 7.5px !important;
+}
+
+input.form-control {
+	padding: 15px 27px !important;
+	border-radius: 0 !important;
+	background-color: white;
+	min-height: 60px !important;
+	border: 0;
+}
+.btn,
+.btn-success {
+	display: inline-block;
+	margin-left: 7.5px !important;
+	padding: 15px 27px !important;
+	background-color: #000;
+	border: 0;
+	font-size: 1.25rem;
+	line-height: 1.25rem;
+	color: white;
+	text-decoration: none;
+	transition: all 300ms ease-in-out;
+	border-radius: 0 !important;
+}
+
+.btn:hover {
+	background-color: #da4042;
+}
+
+@media (max-width: 992px) {
+	body .content {
+		padding: 100px 30px 30px 30px;
+	}
+}
+
+@media (max-width: 767px) {
+	body .content {
+		padding: 100px 0 30px 0;
+	}
+	body .content form .col-md-12 {
+		padding: 0;
+	}
+	body
+		.content
+		form
+		.cx_fieldline
+		.form-group
+		.cx_fieldline-content
+		.cx_checkbox {
+		width: 100%;
+	}
+}
+
+body .cx_content .cx_content-inner .alert {
+	border: 0;
+    background: transparent;
+    color: #000000;
+}
+body .cx_content .cx_content-inner .alert p {
+	margin-bottom: 10px !important;
+	font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+}
+body .cx_content .cx_content-inner .alert p a {
+	color: #000000;
+	text-decoration: underline;
+}
+body .cx_content .cx_content-inner .alert p a:hover {
+	text-decoration: none;
+}

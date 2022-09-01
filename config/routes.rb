@@ -60,7 +60,8 @@ post "graphql", to: "shop#graphql"
   get 'friend', to: 'joinus#vriend'
   get 'donate', to: 'joinus#donatie'
   get 'newsletter', to: 'joinus#nieuwsbrief'
-
+    post "payment", to: "joinus#payment",as: :payment
+    get "payment_failed", to: "joinus#paymentfailed", as: :payment_failed
 end
 scope '(:locale)', locale: /nl|/ do
 get "", to: "site#search",
@@ -115,6 +116,8 @@ post "graphql", to: "shop#graphql"
 
   get 'doe-mee/:title1/:title', to: 'joinus#otherroute'
   get 'doe-mee/:title1', to: 'joinus#othershortroute'
+    post "payment", to: "joinus#payment",as: :payment_en
+    get "payment_failed", to: "joinus#paymentfailed", as: :payment_failed_en
 
 end
 

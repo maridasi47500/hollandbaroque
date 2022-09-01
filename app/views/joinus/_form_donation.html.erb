@@ -1,4 +1,4 @@
-<%=form_with model: donation, scope:"", url: "/engine?locale=#{I18n.locale}", html: { id:"cx_1", class: "cx_form-P7 cx_form", name: "main", "data-urlifmodified"=>"/engine?service=recordmanager:form:P7//1487&amp;cmd=asksave" } do |form|%>
+<%=form_with method: :post, model: donation, scope:"", url: "/engine?locale=#{I18n.locale}", html: { id:"cx_1", class: "cx_form-P7 cx_form", name: "main", "data-urlifmodified"=>"/engine?service=recordmanager:form:P7//1487&amp;cmd=asksave&amp;locale=#{I18n.locale}" } do |form|%>
 			<input name="form-id" type="hidden" value="34">
 		<input name="csrf-key" type="hidden" value="5272144690143447860">
 		<input name="submit-number" type="hidden" value="0">
@@ -81,14 +81,14 @@
 						
 																				
 
-<div id="cx_marker_value_form-P69" class="cx_widget cx_required cx_widget-form:P69 cx_persistantContent" data-btn-size="0" data-urlonchange="/engine?modified-field=form:P69&amp;xform=34&amp;x-key=34&amp;xajax-source=fieldgroup">
+<div id="cx_marker_value_form-P69" class="cx_widget cx_required cx_widget-form:P69 cx_persistantContent" data-btn-size="0" data-urlonchange="/engine?modified-field=form:P69&amp;xform=34&amp;x-key=34&amp;xajax-source=fieldgroup&amp;locale=<%=I18n.locale%>">
 	 	
 	
 			
 	
 
 
-<%=form.select :amount, ([1500,2500,5000].map{|h|["€ #{h},-", h]}+[t("onpages.other"),0]), {}, {id: "form:P69", class: "form-control-sm form-control cx_select cx_autosubmit"}%>
+<%=form.select :amount, ([1500,2500,5000].map{|h|["€ #{h},-", h]}+[[t("onpages.other"),0]]), {include_blank: true}, {id: "form:P69", class: "form-control-sm form-control cx_select cx_autosubmit"}%>
 			
  
 	
@@ -132,7 +132,7 @@
 						
 																				
 
-<div id="cx_marker_value_form-P70" class="cx_widget cx_required cx_widget-form:P70 cx_persistantContent" data-btn-size="0" data-urlonchange="/engine?modified-field=form:P70&amp;xform=34&amp;x-key=34&amp;xajax-source=fieldgroup">
+<div id="cx_marker_value_form-P70" class="cx_widget cx_required cx_widget-form:P70 cx_persistantContent" data-btn-size="0" data-urlonchange="/engine?modified-field=form:P70&amp;xform=34&amp;x-key=34&amp;xajax-source=fieldgroup&amp;locale=<%=I18n.locale%>">
 	 	
 	
 			
@@ -223,7 +223,7 @@
 			
 								
 						<div class="col-md-3 cx_grid-col control-label cx_control-label-left text-md-right col-form-label col-form-label-sm">
-									<%=form.label :middlename, class: "cx_label", id: "cx_label-form:P58", for: "form:P58")%>
+									<%=form.label(:middlename, class: "cx_label", id: "cx_label-form:P58", for: "form:P58")%>
 						
 									
 			</div>
@@ -381,12 +381,12 @@
 						
 																				
 
-<div id="cx_marker_value_form-P61" class="cx_widget cx_widget-form:P61 cx_persistantContent" data-btn-size="0" data-urlonchange="/engine?modified-field=form:P61&amp;xform=34&amp;x-key=34&amp;xajax-source=fieldgroup">
+<div id="cx_marker_value_form-P61" class="cx_widget cx_widget-form:P61 cx_persistantContent" data-btn-size="0" data-urlonchange="/engine?modified-field=form:P61&amp;xform=34&amp;x-key=34&amp;xajax-source=fieldgroup&amp;locale=<%=I18n.locale%>">
 	 	
 	
 			
 	<div class="form-control-sm form-control-plaintext cx_form-control-plaintext cx_checkbox">
-				<%=form.check_box(:newsletter, { id: "form:P61", class:"cx_autosubmit"}, "true", "false"%>
+				<%=form.check_box :newsletter, {id: "form:P61", class:"cx_autosubmit"}, "true", "false"%>
 	<label for="form:P61" class="cx_custom-checkbox"></label>
 			<%=form.label(:newsletter, for: "form:P61", class: "control-label cx_label-inline form-check-label")%>
 			
@@ -442,12 +442,12 @@
 						
 																				
 
-<div id="cx_marker_value_form-P62" class="cx_widget cx_widget-form:P62 cx_persistantContent" data-btn-size="0" data-urlonchange="/engine?modified-field=form:P62&amp;xform=34&amp;x-key=34&amp;xajax-source=fieldgroup">
+<div id="cx_marker_value_form-P62" class="cx_widget cx_widget-form:P62 cx_persistantContent" data-btn-size="0" data-urlonchange="/engine?modified-field=form:P62&amp;xform=34&amp;x-key=34&amp;xajax-source=fieldgroup&amp;locale=<%=I18n.locale%>">
 	 	
 	
 			
 	<div class="form-control-sm form-control-plaintext cx_form-control-plaintext cx_checkbox">
-				<%=form.check_box :brochures, id: "form:P62", class: "cx_autosubmit"}, "true", "false"%>
+				<%=form.check_box :brochures, {id: "form:P62", class: "cx_autosubmit"}, "true", "false"%>
 			<%=form.label(:brochures, for: "form:P62", class: "control-label cx_label-inline form-check-label")%>
 			
 		
@@ -493,7 +493,7 @@
 						
 																				
 
-<div id="cx_marker_value_form-P63" class="cx_widget cx_required cx_widget-form:P63 cx_persistantContent" data-btn-size="0" data-urlonchange="/engine?modified-field=form:P63&amp;xform=34&amp;x-key=34&amp;xajax-source=fieldgroup">
+<div id="cx_marker_value_form-P63" class="cx_widget cx_required cx_widget-form:P63 cx_persistantContent" data-btn-size="0" data-urlonchange="/engine?modified-field=form:P63&amp;xform=34&amp;x-key=34&amp;xajax-source=fieldgroup&amp;locale=<%=I18n.locale%>">
 	 	
 	
 			
@@ -544,7 +544,7 @@
 						
 																				
 
-<div id="cx_marker_value_form-P64" class="cx_widget cx_required cx_widget-form:P64 cx_persistantContent" data-btn-size="0" data-urlonchange="/engine?modified-field=form:P64&amp;xform=34&amp;x-key=34&amp;xajax-source=fieldgroup">
+<div id="cx_marker_value_form-P64" class="cx_widget cx_required cx_widget-form:P64 cx_persistantContent" data-btn-size="0" data-urlonchange="/engine?modified-field=form:P64&amp;xform=34&amp;x-key=34&amp;xajax-source=fieldgroup&amp;locale=<%=I18n.locale%>">
 	 	
 	
 			
@@ -595,7 +595,7 @@
 						
 																				
 
-<div id="cx_marker_value_form-P65" class="cx_widget cx_required cx_widget-form:P65 cx_persistantContent" data-btn-size="0" data-urlonchange="/engine?modified-field=form:P65&amp;xform=34&amp;x-key=34&amp;xajax-source=fieldgroup">
+<div id="cx_marker_value_form-P65" class="cx_widget cx_required cx_widget-form:P65 cx_persistantContent" data-btn-size="0" data-urlonchange="/engine?modified-field=form:P65&amp;xform=34&amp;x-key=34&amp;xajax-source=fieldgroup&amp;locale=<%=I18n.locale%>">
 	 	
 	
 			
@@ -646,7 +646,7 @@
 						
 																				
 
-<div id="cx_marker_value_form-P66" class="cx_widget cx_required cx_widget-form:P66 cx_persistantContent" data-btn-size="0" data-urlonchange="/engine?modified-field=form:P66&amp;xform=34&amp;x-key=34&amp;xajax-source=fieldgroup">
+<div id="cx_marker_value_form-P66" class="cx_widget cx_required cx_widget-form:P66 cx_persistantContent" data-btn-size="0" data-urlonchange="/engine?modified-field=form:P66&amp;xform=34&amp;x-key=34&amp;xajax-source=fieldgroup&amp;locale=<%=I18n.locale%>">
 	 	
 	
 			
@@ -700,7 +700,7 @@
 						
 																				
 
-<div id="cx_marker_value_form-P67" class="cx_widget cx_widget-form:P67 cx_persistantContent" data-btn-size="0" data-urlonchange="/engine?modified-field=form:P67&amp;xform=34&amp;x-key=34&amp;xajax-source=fieldgroup">
+<div id="cx_marker_value_form-P67" class="cx_widget cx_widget-form:P67 cx_persistantContent" data-btn-size="0" data-urlonchange="/engine?modified-field=form:P67&amp;xform=34&amp;x-key=34&amp;xajax-source=fieldgroup&amp;locale=<%=I18n.locale%>">
 	 	
 	
 			
@@ -749,7 +749,7 @@
 						
 																				
 
-<div id="cx_marker_value_form-P68" class="cx_widget cx_required cx_widget-form:P68 cx_persistantContent" data-btn-size="0" data-urlonchange="/engine?modified-field=form:P68&amp;xform=34&amp;x-key=34&amp;xajax-source=fieldgroup">
+<div id="cx_marker_value_form-P68" class="cx_widget cx_required cx_widget-form:P68 cx_persistantContent" data-btn-size="0" data-urlonchange="/engine?modified-field=form:P68&amp;xform=34&amp;x-key=34&amp;xajax-source=fieldgroup&amp;locale=<%=I18n.locale%>">
 	 	
 	
 			
@@ -772,7 +772,7 @@
 	
 
 	<div class="cx_text" data-explanationurl="">
-		<%=t('onpages.compulory')%>
+		<%=t('onpages.compulsory')%>
 	</div>
 
 
@@ -791,7 +791,7 @@
 
 
 
-<a id="cx_4" role="button" class="btn btn-success cx_btn btn-sm cx_btn-send cx_submit" href="/engine?service=recordmanager:form:P7//1487&amp;cmd=save" aria-label="<%=t("activerecord.attributes.friendship.send")%>" draggable="false" data-changeonmodifiedstate="true">
+<a id="cx_4" role="button" class="btn btn-success cx_btn btn-sm cx_btn-send cx_submit" href="/engine?service=recordmanager:form:P7//1487&amp;cmd=save&amp;locale=<%=I18n.locale%>" aria-label="<%=t("activerecord.attributes.friendship.send")%>" draggable="false" data-changeonmodifiedstate="true">
 							<span class="cx_icon fa" aria-hidden="true" data-btnname="save"></span> 	
 							<span class="cx_btn-label"><%=t("activerecord.attributes.friendship.send")%></span>
 				</a>

@@ -1,4 +1,4 @@
-<%=form_with model: friendship,scope:"", builder: LabeledFormBuilder, url: "/engine?locale=#{I18n.locale}", html: {id: "cx_1", class: "cx_form-P9 cx_form", name: "main", "data-urlifmodified"=>"/engine?service=recordmanager:form:P9//1492&amp;cmd=asksave"} do |form|%>
+<%=form_with model: friendship,scope:"", builder: LabeledFormBuilder, url: "/engine?locale=#{I18n.locale}", html: {id: "cx_1", class: "cx_form-P9 cx_form", name: "main", "data-urlifmodified"=>"/engine?service=recordmanager:form:P9//1492&amp;cmd=asksave&amp;locale=#{I18n.locale}"} do |form|%>
 			<input name="form-id" type="hidden" value="32">
 		<input name="csrf-key" type="hidden" value="2022453949388583905">
 		<input name="submit-number" type="hidden" value="0">
@@ -98,7 +98,7 @@
 						
 																				
 
-<div id="cx_marker_value_form-P107" class="cx_widget cx_required cx_widget-form:P107 cx_persistantContent" data-btn-size="0" data-urlonchange="/engine?modified-field=form:P107&amp;xform=32&amp;x-key=32&amp;xajax-source=fieldgroup">
+<div id="cx_marker_value_form-P107" class="cx_widget cx_required cx_widget-form:P107 cx_persistantContent" data-btn-size="0" data-urlonchange="/engine?modified-field=form:P107&amp;xform=32&amp;x-key=32&amp;xajax-source=fieldgroup&amp;locale=<%=I18n.locale%>">
 	 	
 	
 			
@@ -901,7 +901,7 @@
 
 
 
-<a id="cx_4" role="button" class="btn btn-secondary cx_btn btn-sm cx_btn-send cx_submit" href="/engine?service=recordmanager:form:P9//1492&amp;cmd=save&locale=<%=I18n.locale%>" aria-label="<%=t("activerecord.attributes.friendship.send")%>" draggable="false" data-changeonmodifiedstate="true">
+<a id="cx_4" role="button" class="btn btn-secondary cx_btn btn-sm cx_btn-send cx_submit" href="/engine?service=recordmanager:form:P9//1492&amp;cmd=save&amp;locale=<%=I18n.locale%>" aria-label="<%=t("activerecord.attributes.friendship.send")%>" draggable="false" data-changeonmodifiedstate="true">
 							<span class="cx_icon fa" aria-hidden="true" data-btnname="save"></span> 	
 							<span class="cx_btn-label"><%=t("activerecord.attributes.friendship.send")%></span>
 				</a>

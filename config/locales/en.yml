@@ -27,6 +27,14 @@ en:
     presskit: "Press kit" 
     msgfooter: "Our activities are made possible in part by a contribution from the Ministry of Education, Culture and Science and Municipality of Utrecht"
   onpages:
+    cdnewsletter: "Sign up for our newsletter. We raffle a CD every month among the new registrations."  
+    newsletter: "Newsletter"  
+    supportmusicians: "Support our musicians with a donation!"  
+    donations: "Donations"  
+    email: "Email"  
+    phone: "Phone number"  
+    tryagain: "Would you be so kind as to try again?<br>Or contact us and we will help you further."  
+    pitypayment: "What a pity, the payment has not been successful."  
     compulsory: "* obligatory field"  
     other: "Other"  
     soulmate: "Soul mate"  
@@ -89,6 +97,20 @@ en:
       other: "%{count} private"
   activerecord:
     attributes: 
+      newsletter:
+        firstname: "First name"
+        prefix: "Prefix"
+        lastname: "Last name"
+        email: "E-mail address"
+        newsletter: "Yes, I would like to receive the digital newsletter."
+        brochures: "Yes, I would also like to receive seasonal brochures, postcards, etc."
+        street: "Street"
+        housenumber: "House number"
+        postcode: "Postcode"
+        city: "City"
+        country: "Country"
+        phone: "Phone"
+        privacy: "I hereby authorize Holland Baroque to debit the entered amount."
       donation:
         amount: "Amount choice"
         namely: "Namely"
@@ -125,6 +147,30 @@ en:
         send: "Send"
     errors:
       models: 
+        newsletter:
+          attributes:
+            lastname: 
+              blank: "Last name is empty"  
+            firstname: 
+              blank: "First name is empty"  
+            country: 
+              blank: "Country is empty"  
+            city: 
+              blank: "City is empty"  
+            postcode: 
+              blank: "Postcode is empty"  
+            housenumber: 
+              blank: "House number is empty"  
+            street: 
+              blank: "Street is empty"  
+            email: 
+              blank: "E-mail address is empty"  
+        donation: 
+          attributes: 
+            namely: 
+              blank: "Amount is empty."            
+            amount: 
+              blank: "Amount is empty."
         friendship: 
           attributes: 
             privacy: 

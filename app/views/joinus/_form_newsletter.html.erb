@@ -1,4 +1,4 @@
-<form id="cx_1" class="cx_form-P5 cx_form" name="main" data-urlifmodified="/engine?service=recordmanager:form:P5//1499&amp;cmd=asksave" method="post" action="/engine">
+<%=form_with model: newsletter, scope:"", url: "/engine?locale=#{I18n.locale}",html: {id: "cx_1", class: "cx_form-P5 cx_form", name: "main", "data-urlifmodified"=>"/engine?service=recordmanager:form:P5//1499&amp;cmd=asksave&amp;locale=#{I18n.locale}"} do |form| %>
 			<input name="form-id" type="hidden" value="30">
 		<input name="csrf-key" type="hidden" value="2524275471515589448">
 		<input name="submit-number" type="hidden" value="0">
@@ -6,9 +6,14 @@
 
 
 
+
 <%if newsletter.errors.messages.length > 0%>
 <div class="alert alert-danger" data-explanationurl="">
-		Het formulier is niet goed ingevuld<ul><li>Bedrag keuze is leeg</li><li>Straat is leeg</li><li>Huisnummer is leeg</li><li>Postcode is leeg</li><li>Plaats is leeg</li><li>Ik ga akkoord met <a href="https://hollandbaroque.nl/privacy/" target="blank">het privacybeleid.</a> is leeg</li></ul>
+		<%=t('onpages.errorform')%><ul>
+<%newsletter.errors.messages.each do |m|%>
+<li><%=m[1][0]%></li>
+<%end%>
+</ul>
 	</div>
 <%end%>
 
@@ -54,9 +59,8 @@
 				
 								
 						<div class="col-md-3 cx_grid-col control-label cx_control-label-left text-md-right col-form-label col-form-label-sm">
-									<label class="cx_label" id="cx_label-form:P45" for="form:P45">
-						First name <span class="cx_required-mark"></span>
-					</label>
+									<%=form.label(:firstname,class: "cx_label", id: "cx_label-form:P45", for: "form:P45")%>
+						
 									
 			</div>
 			
@@ -73,7 +77,7 @@
 
 
 
-<input type="text" id="form:P45" class="form-control-sm form-control" name="form:P45" value=""> 
+<%=form.text_field :firstname, id: "form:P45", class: "form-control-sm form-control"%> 
 	
 		 
 		</div>
@@ -105,9 +109,8 @@
 			
 								
 						<div class="col-md-3 cx_grid-col control-label cx_control-label-left text-md-right col-form-label col-form-label-sm">
-									<label class="cx_label" id="cx_label-form:P46" for="form:P46">
-						Prefix
-					</label>
+									<%=form.label(:prefix, class: "cx_label", id: "cx_label-form:P46", for: "form:P46")%>
+						
 									
 			</div>
 			
@@ -124,7 +127,7 @@
 
 
 
-<input type="text" id="form:P46" class="form-control-sm form-control" name="form:P46" value=""> 
+<%=form.text_field :prefix, id: "form:P46", class: "form-control-sm form-control" %>
 	
 		 
 		</div>
@@ -156,9 +159,8 @@
 				
 								
 						<div class="col-md-3 cx_grid-col control-label cx_control-label-left text-md-right col-form-label col-form-label-sm">
-									<label class="cx_label" id="cx_label-form:P47" for="form:P47">
-						Last name <span class="cx_required-mark"></span>
-					</label>
+									<%=form.label(:lastname, class: "cx_label", id: "cx_label-form:P47", for: "form:P47")%>
+						
 									
 			</div>
 			
@@ -175,7 +177,7 @@
 
 
 
-<input type="text" id="form:P47" class="form-control-sm form-control" name="form:P47" value=""> 
+<%=form.text_field :lastname, id: "form:P47", class: "form-control-sm form-control"%> 
 	
 		 
 		</div>
@@ -207,9 +209,8 @@
 				
 								
 						<div class="col-md-3 cx_grid-col control-label cx_control-label-left text-md-right col-form-label col-form-label-sm">
-									<label class="cx_label" id="cx_label-form:P48" for="form:P48">
-						E-mail address <span class="cx_required-mark"></span>
-					</label>
+									<%=form.label(:email, class: "cx_label", id: "cx_label-form:P48", for: "form:P48")%>
+						
 									
 			</div>
 			
@@ -226,7 +227,7 @@
 
 
 
-<input type="email" id="form:P48" class="form-control-sm form-control" name="form:P48" value=""> 
+<%=form.email_field :email, id: "form:P48", class: "form-control-sm form-control" %>
 	
 		 
 		</div>
@@ -271,11 +272,10 @@
 	
 			
 	<div class="form-control-sm form-control-plaintext cx_form-control-plaintext cx_checkbox">
-			<input type="checkbox" id="form:P49" name="form:P49" value="true">
-	<label for="form:P49" class="cx_custom-checkbox"></label>
-			<label for="form:P49" class="control-label cx_label-inline form-check-label">
-			Yes, I would like to receive the digital newsletter.
-		</label>
+			<%=form.check_box :newsletter,{id: "form:P49"}, "true","false"%>
+	<%=form.label(:newsletter,for: "form:P49", class: "cx_custom-checkbox")%>
+			<%=form.label(:newsletter, for: "form:P49", class: "control-label cx_label-inline form-check-label")%>
+			
 	</div> 
 	
 		 
@@ -327,16 +327,15 @@
 						
 																				
 
-<div id="cx_marker_value_form-P51" class="cx_widget cx_widget-form:P51 cx_persistantContent" data-btn-size="0" data-urlonchange="/engine?modified-field=form:P51&amp;xform=30&amp;x-key=30&amp;xajax-source=fieldgroup">
+<div id="cx_marker_value_form-P51" class="cx_widget cx_widget-form:P51 cx_persistantContent" data-btn-size="0" data-urlonchange="/engine?modified-field=form:P51&amp;xform=30&amp;x-key=30&amp;xajax-source=fieldgroup&amp;locale=<%=I18n.locale%>">
 	 	
 	
 			
 	<div class="form-control-sm form-control-plaintext cx_form-control-plaintext cx_checkbox">
-				<input type="checkbox" id="form:P51" name="form:P51" value="true" class="cx_autosubmit" checked="">
-	<label for="form:P51" class="cx_custom-checkbox"></label>
-			<label for="form:P51" class="control-label cx_label-inline form-check-label">
-			Yes, I would also like to receive seasonal brochures, postcards, etc.
-		</label>
+				<%=form.check_box :brochures, {class: "cx_autosubmit", id: "form:P51"}, "true", "false" %>
+	<%=form.label(:brochures, for: "form:P51", class: "cx_custom-checkbox")%>
+			<%=form.label(:brochures, for: "form:P51", class: "control-label cx_label-inline form-check-label")%>
+			
 	</div> 
 	
 		 
@@ -369,9 +368,8 @@
 				
 								
 						<div class="col-md-3 cx_grid-col control-label cx_control-label-left text-md-right col-form-label col-form-label-sm">
-									<label class="cx_label" id="cx_label-form:P54" for="form:P54">
-						Street <span class="cx_required-mark"></span>
-					</label>
+									<%=form.label(:street, class: "cx_label", id: "cx_label-form:P54", for: "form:P54")%>
+						
 									
 			</div>
 			
@@ -380,7 +378,7 @@
 						
 																				
 
-<div id="cx_marker_value_form-P54" class="cx_widget cx_required cx_widget-form:P54 cx_persistantContent" data-btn-size="0" data-urlonchange="/engine?modified-field=form:P54&amp;xform=30&amp;x-key=30&amp;xajax-source=fieldgroup">
+<div id="cx_marker_value_form-P54" class="cx_widget cx_required cx_widget-form:P54 cx_persistantContent" data-btn-size="0" data-urlonchange="/engine?modified-field=form:P54&amp;xform=30&amp;x-key=30&amp;xajax-source=fieldgroup&amp;locale=<%=I18n.locale%>">
 	 	
 	
 			
@@ -388,7 +386,7 @@
 
 
 
-<input type="text" id="form:P54" class="form-control-sm form-control cx_autosubmit" name="form:P54" value=""> 
+<%=form.text_field :street, id: "form:P54", class: "form-control-sm form-control cx_autosubmit"%>
 	
 		 
 		</div>
@@ -421,9 +419,8 @@
 				
 								
 						<div class="col-md-3 cx_grid-col control-label cx_control-label-left text-md-right col-form-label col-form-label-sm">
-									<label class="cx_label" id="cx_label-form:P50" for="form:P50">
-						House number <span class="cx_required-mark"></span>
-					</label>
+									<%=form.label(:housenumber, class: "cx_label", id: "cx_label-form:P50", for: "form:P50")%>
+						
 									
 			</div>
 			
@@ -432,7 +429,7 @@
 						
 																				
 
-<div id="cx_marker_value_form-P50" class="cx_widget cx_required cx_widget-form:P50 cx_persistantContent" data-btn-size="0" data-urlonchange="/engine?modified-field=form:P50&amp;xform=30&amp;x-key=30&amp;xajax-source=fieldgroup">
+<div id="cx_marker_value_form-P50" class="cx_widget cx_required cx_widget-form:P50 cx_persistantContent" data-btn-size="0" data-urlonchange="/engine?modified-field=form:P50&amp;xform=30&amp;x-key=30&amp;xajax-source=fieldgroup&amp;locale=<%=I18n.locale%>">
 	 	
 	
 			
@@ -440,7 +437,7 @@
 
 
 
-<input type="text" id="form:P50" class="form-control-sm form-control cx_autosubmit" name="form:P50" value=""> 
+<%=form.text_field :housenumber, id: "form:P50", class: "form-control-sm form-control cx_autosubmit"%>
 	
 		 
 		</div>
@@ -473,9 +470,8 @@
 				
 								
 						<div class="col-md-3 cx_grid-col control-label cx_control-label-left text-md-right col-form-label col-form-label-sm">
-									<label class="cx_label" id="cx_label-form:P53" for="form:P53">
-						Postal code <span class="cx_required-mark"></span>
-					</label>
+									<%=form.label(:postcode, class: "cx_label", id: "cx_label-form:P53", for: "form:P53")%>
+						
 									
 			</div>
 			
@@ -484,7 +480,7 @@
 						
 																				
 
-<div id="cx_marker_value_form-P53" class="cx_widget cx_required cx_widget-form:P53 cx_persistantContent" data-btn-size="0" data-urlonchange="/engine?modified-field=form:P53&amp;xform=30&amp;x-key=30&amp;xajax-source=fieldgroup">
+<div id="cx_marker_value_form-P53" class="cx_widget cx_required cx_widget-form:P53 cx_persistantContent" data-btn-size="0" data-urlonchange="/engine?modified-field=form:P53&amp;xform=30&amp;x-key=30&amp;xajax-source=fieldgroup&amp;locale=<%=I18n.locale%>">
 	 	
 	
 			
@@ -492,7 +488,7 @@
 
 
 
-<input type="text" id="form:P53" class="form-control-sm form-control cx_autosubmit" name="form:P53" value=""> 
+<%=form.text_field :postcode, id: "form:P53", class: "form-control-sm form-control cx_autosubmit" %> 
 	
 		 
 		</div>
@@ -525,9 +521,8 @@
 				
 								
 						<div class="col-md-3 cx_grid-col control-label cx_control-label-left text-md-right col-form-label col-form-label-sm">
-									<label class="cx_label" id="cx_label-form:P52" for="form:P52">
-						City <span class="cx_required-mark"></span>
-					</label>
+									<%=form.label(:city, class: "cx_label", id: "cx_label-form:P52", for: "form:P52")%>
+						
 									
 			</div>
 			
@@ -536,7 +531,7 @@
 						
 																				
 
-<div id="cx_marker_value_form-P52" class="cx_widget cx_required cx_widget-form:P52 cx_persistantContent" data-btn-size="0" data-urlonchange="/engine?modified-field=form:P52&amp;xform=30&amp;x-key=30&amp;xajax-source=fieldgroup">
+<div id="cx_marker_value_form-P52" class="cx_widget cx_required cx_widget-form:P52 cx_persistantContent" data-btn-size="0" data-urlonchange="/engine?modified-field=form:P52&amp;xform=30&amp;x-key=30&amp;xajax-source=fieldgroup&amp;locale=<%=I18n.locale%>">
 	 	
 	
 			
@@ -544,7 +539,7 @@
 
 
 
-<input type="text" id="form:P52" class="form-control-sm form-control cx_autosubmit" name="form:P52" value=""> 
+<%=form.text_field :city, id: "form:P52", class: "form-control-sm form-control cx_autosubmit" %>
 	
 		 
 		</div>
@@ -577,9 +572,8 @@
 				
 								
 						<div class="col-md-3 cx_grid-col control-label cx_control-label-left text-md-right col-form-label col-form-label-sm">
-									<label class="cx_label" id="cx_label-form:P75" for="form:P75">
-						Country <span class="cx_required-mark"></span>
-					</label>
+									<%=form.label(:country, class: "cx_label", id: "cx_label-form:P75", for: "form:P75")%>
+						
 									
 			</div>
 			
@@ -588,7 +582,7 @@
 						
 																				
 
-<div id="cx_marker_value_form-P75" class="cx_widget cx_required cx_widget-form:P75 cx_persistantContent" data-btn-size="0" data-urlonchange="/engine?modified-field=form:P75&amp;xform=30&amp;x-key=30&amp;xajax-source=fieldgroup">
+<div id="cx_marker_value_form-P75" class="cx_widget cx_required cx_widget-form:P75 cx_persistantContent" data-btn-size="0" data-urlonchange="/engine?modified-field=form:P75&amp;xform=30&amp;x-key=30&amp;xajax-source=fieldgroup&amp;locale=<%=I18n.locale%>">
 	 	
 	
 			
@@ -596,7 +590,7 @@
 
 
 
-<input type="text" id="form:P75" class="form-control-sm form-control cx_autosubmit" name="form:P75" value=""> 
+<%=form.text_field :country, id: "form:P75", class: "form-control-sm form-control cx_autosubmit" %> 
 	
 		 
 		</div>
@@ -629,9 +623,8 @@
 			
 								
 						<div class="col-md-3 cx_grid-col control-label cx_control-label-left text-md-right col-form-label col-form-label-sm">
-									<label class="cx_label" id="cx_label-form:P55" for="form:P55">
-						Phone
-					</label>
+									<%=form.label(:phone, class: "cx_label", id: "cx_label-form:P55", for: "form:P55")%>
+						
 									
 			</div>
 			
@@ -640,7 +633,7 @@
 						
 																				
 
-<div id="cx_marker_value_form-P55" class="cx_widget cx_widget-form:P55 cx_persistantContent" data-btn-size="0" data-urlonchange="/engine?modified-field=form:P55&amp;xform=30&amp;x-key=30&amp;xajax-source=fieldgroup">
+<div id="cx_marker_value_form-P55" class="cx_widget cx_widget-form:P55 cx_persistantContent" data-btn-size="0" data-urlonchange="/engine?modified-field=form:P55&amp;xform=30&amp;x-key=30&amp;xajax-source=fieldgroup&amp;locale=<%=I18n.locale%>">
 	 	
 	
 			
@@ -648,7 +641,7 @@
 
 
 
-<input type="text" id="form:P55" class="form-control-sm form-control cx_autosubmit" name="form:P55" value=""> 
+<%=form.text_field :phone, id: "form:P55", class: "form-control-sm form-control cx_autosubmit" %>
 	
 		 
 		</div>
@@ -694,11 +687,10 @@
 	
 			
 	<div class="form-control-sm form-control-plaintext cx_form-control-plaintext cx_checkbox">
-			<input type="checkbox" id="form:P56" name="form:P56" value="true">
-	<label for="form:P56" class="cx_custom-checkbox"></label>
-			<label for="form:P56" class="control-label cx_label-inline form-check-label">
-			I agree with the <a href="https://hollandbaroque.nl/privacy/" target="blank">privacy policy</a>.
-		</label>
+			<%=form.check_box :privacy, {id:"form:P56"}, "true","false"%>
+	<%=form.label(:privacy,for: "form:P56", class: "cx_custom-checkbox")%>
+			<%=form.label(:privacy, for: "form:P56", class: "control-label cx_label-inline form-check-label")%>
+			
 	</div> 
 	
 		 
@@ -731,11 +723,11 @@
 
 
 
-<a id="cx_4" role="button" class="btn btn-success cx_btn btn-sm cx_btn-send cx_submit" href="/engine?service=recordmanager:form:P5//1499&amp;cmd=save" aria-label="Send" draggable="false" data-changeonmodifiedstate="true">
+<a id="cx_4" role="button" class="btn btn-success cx_btn btn-sm cx_btn-send cx_submit" href="/engine?service=recordmanager:form:P5//1499&amp;cmd=save&amp;locale=<%=I18n.locale%>" aria-label="<%=t("activerecord.attributes.friendship.send")%>" draggable="false" data-changeonmodifiedstate="true">
 							<span class="cx_icon fa" aria-hidden="true" data-btnname="save"></span> 	
-							<span class="cx_btn-label">Send</span>
+							<span class="cx_btn-label"><%=t("activerecord.attributes.friendship.send")%></span>
 				</a>
 					</div>
 			</div>
 
-</form>
+<%end%>

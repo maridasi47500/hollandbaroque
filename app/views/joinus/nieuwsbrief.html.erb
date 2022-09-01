@@ -21,7 +21,18 @@
  	</script>
  	<script>jQuery(document).ready(function() { CX.setFocus("#cx_1 :input[name='form:P45']"); });</script>	
 
-  	
+  <style>
+
+
+.with_error {
+border: 3px solid red;
+}
+
+.cx_grid-col label:not(.cx_grid-col .cx_widget .with_error ~ .cx_widget){
+  color: black
+}
+
+</style>	
    
   <script src="/saved_resource_en_files/paragraph.js"></script></head>
   <body style="cursor: default;">
@@ -32,7 +43,7 @@
 	
 
 	<h1 class="cx_title1" data-explanationurl="">
-		Nieuwsbrief
+		<%=t('onpages.newsletter')%>
 	</h1>
 
 
@@ -40,7 +51,7 @@
 	
 
 	<div class="cx_text" data-explanationurl="">
-		Sign up for our newsletter. We raffle a CD every month among the new registrations.
+		<%=t('onpages.cdnewsletter')%>
 	</div>
 
 

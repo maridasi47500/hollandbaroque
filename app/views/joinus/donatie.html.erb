@@ -12,12 +12,12 @@
 	<link rel="stylesheet" href="/donatie_nl_files/font-awesome-4.6.3.min.css">
 	
 	  	<link rel="stylesheet" type="text/css" href="/donatie_nl_files/formulieren.css">
-	<!--
+	
 	<script src="/donatie_nl_files/jquery-2.2.1.min.js"></script>
 	<script src="/donatie_nl_files/bootstrap.min.js"></script>
- 	-->
-        <!--<script src="/donatie_nl_files/cx.js"></script>	
- 	--><script>
+ 	
+        <script src="/donatie_nl_files/cx.js"></script>	
+ 	<script>
  		crossmarx.setFocus = function(selector){}; // empty function to override default setFocus
  	</script>
  		
@@ -29,14 +29,14 @@ border: 3px solid red;
 }
 
 .cx_grid-col label:not(.cx_grid-col .cx_widget .with_error ~ .cx_widget){
-  color: red
+  color: black
 }
 
 </style>
   	
-   <!--
+   
   <script src="/donatie_nl_files/paragraph.js"></script></head>
-  --><body style="cursor: default;">
+  <body style="cursor: default;">
     <div class="content">
       <div class="container-fluid cx_content cx_content-fwp" cx-module="contentwrapper">
 	<div class="cx_content-inner">
@@ -44,7 +44,7 @@ border: 3px solid red;
 	
 
 	<h1 class="cx_title1" data-explanationurl="">
-		Donaties
+		<%=t('onpages.donations')%>
 	</h1>
 
 
@@ -52,7 +52,7 @@ border: 3px solid red;
 	
 
 	<div class="cx_text" data-explanationurl="">
-		Steun onze musici met een eenmalige donatie!
+		<%=t('onpages.supportmusicians')%>
 	</div>
 
 
